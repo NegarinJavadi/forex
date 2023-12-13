@@ -3,12 +3,8 @@ from infrastructure.instrument_collection import instrumentCollection
 
 
 if __name__ == '__main__':
-    api = OandaApi()
+    api = OandaApi()  
 
-
-    data = api.get_account_summary() #then delete
-    print(data) #then delete
-
-    #instrumentCollection.CreateFile(api.get_account_instruments(), "./data")
-    #instrumentCollection.LoadInstruments("./data")
-    #instrumentCollection.PrintInstruments()
+    instrumentCollection.CreateFile(api.get_account_instruments(), "./data")
+    instrumentCollection.LoadInstruments("./data")
+    instrumentCollection.PrintInstruments()

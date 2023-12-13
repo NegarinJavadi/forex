@@ -1,5 +1,9 @@
+import sys
+sys.path.append('/home/negarin/Desktop/Appendix/code')
+
 import json
-from models.instruments import instruments
+from models.instruments import Instrument
+
 class InstrumentCollection:
     FILENAME = "instruments.json"
     API_KEYS = ['name', 'type', 'displayName',
@@ -15,9 +19,10 @@ class InstrumentCollection:
         with open(fileName, "r") as f:
             data = json.loads(f.read())
             for k, v in data.items():
-                self.instruments_dict[k] = instruments.FromApiObject(v)
+                self.instruments_dict[k] = Instrument.FromApiObject(v)
 
-    
+
+
     def CreateFile(self, data, path):
         if data is None:
             print("Instrument file creation failed")
@@ -25,15 +30,16 @@ class InstrumentCollection:
         
         instruments_dict = {}
         for i in data:
-            key = i['name']
-            instruments_dict[key] = { k: i[k] for k in self.API_KEYS}
+            key = i.get('name')
+            if key is not None:
+                instruments_dict[key] = { k: i.get(k, None) for k in self.API_KEYS}
 
         fileName = f"{path}/{self.FILENAME}"
         with open(fileName, "w") as f:
             f.write(json.dumps(instruments_dict, indent=2))    
     
 
-    
+
     def PrintInstruments(self):
         [print(k,v) for k,v in self.instruments_dict.items()]
         print(len(self.instruments_dict.keys()), "instruments")

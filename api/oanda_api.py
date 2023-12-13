@@ -34,7 +34,7 @@ class OandaApi:
         
  
     def get_account_ep(self, ep, data_key):
-        base_url= 'https://'
+        base_url= 'https://api-fxpractice.oanda.com/v3/'
         url= f"{base_url}accounts/{defs.ACCOUNT_ID}/{ep}"
         ok, data= self.make_request(url)
         if ok ==True and data_key in data:
