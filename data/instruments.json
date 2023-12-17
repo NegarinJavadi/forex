@@ -3,7 +3,7 @@
     "name": "XAG_USD",
     "type": "METAL",
     "displayName": "Silver",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -11,7 +11,7 @@
     "name": "USB30Y_USD",
     "type": "CFD",
     "displayName": "US T-Bond",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.20"
   },
@@ -19,7 +19,7 @@
     "name": "USB05Y_USD",
     "type": "CFD",
     "displayName": "US 5Y T-Note",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.20"
   },
@@ -27,7 +27,7 @@
     "name": "NZD_JPY",
     "type": "CURRENCY",
     "displayName": "NZD/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -35,7 +35,7 @@
     "name": "EUR_CZK",
     "type": "CURRENCY",
     "displayName": "EUR/CZK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -43,7 +43,7 @@
     "name": "XAU_AUD",
     "type": "METAL",
     "displayName": "Gold/AUD",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -51,7 +51,7 @@
     "name": "WHEAT_USD",
     "type": "CFD",
     "displayName": "Wheat",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -59,7 +59,7 @@
     "name": "CAD_SGD",
     "type": "CURRENCY",
     "displayName": "CAD/SGD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -67,7 +67,7 @@
     "name": "AUD_NZD",
     "type": "CURRENCY",
     "displayName": "AUD/NZD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -75,7 +75,7 @@
     "name": "EUR_GBP",
     "type": "CURRENCY",
     "displayName": "EUR/GBP",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -83,7 +83,7 @@
     "name": "FR40_EUR",
     "type": "CFD",
     "displayName": "France 40",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -91,7 +91,7 @@
     "name": "CHF_HKD",
     "type": "CURRENCY",
     "displayName": "CHF/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -99,7 +99,7 @@
     "name": "US30_USD",
     "type": "CFD",
     "displayName": "US Wall St 30",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -107,7 +107,7 @@
     "name": "EUR_NOK",
     "type": "CURRENCY",
     "displayName": "EUR/NOK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -115,7 +115,7 @@
     "name": "XAU_USD",
     "type": "METAL",
     "displayName": "Gold",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -123,7 +123,7 @@
     "name": "JP225Y_JPY",
     "type": "CFD",
     "displayName": "Japan 225 (JPY)",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -131,7 +131,7 @@
     "name": "UK100_GBP",
     "type": "CFD",
     "displayName": "UK 100",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -139,7 +139,7 @@
     "name": "EUR_HUF",
     "type": "CURRENCY",
     "displayName": "EUR/HUF",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -147,7 +147,7 @@
     "name": "GBP_NZD",
     "type": "CURRENCY",
     "displayName": "GBP/NZD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -155,7 +155,7 @@
     "name": "SUGAR_USD",
     "type": "CFD",
     "displayName": "Sugar",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -163,7 +163,7 @@
     "name": "EUR_PLN",
     "type": "CURRENCY",
     "displayName": "EUR/PLN",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -171,7 +171,7 @@
     "name": "DE10YB_EUR",
     "type": "CFD",
     "displayName": "Bund",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.20"
   },
@@ -179,7 +179,7 @@
     "name": "GBP_PLN",
     "type": "CURRENCY",
     "displayName": "GBP/PLN",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -187,7 +187,7 @@
     "name": "CH20_CHF",
     "type": "CFD",
     "displayName": "Switzerland 20",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.1"
   },
@@ -195,7 +195,7 @@
     "name": "CAD_HKD",
     "type": "CURRENCY",
     "displayName": "CAD/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -203,7 +203,7 @@
     "name": "XAG_CHF",
     "type": "METAL",
     "displayName": "Silver/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -211,7 +211,7 @@
     "name": "USD_CHF",
     "type": "CURRENCY",
     "displayName": "USD/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.04"
   },
@@ -219,7 +219,7 @@
     "name": "XAG_HKD",
     "type": "METAL",
     "displayName": "Silver/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -227,7 +227,7 @@
     "name": "AUD_HKD",
     "type": "CURRENCY",
     "displayName": "AUD/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -235,7 +235,7 @@
     "name": "ESPIX_EUR",
     "type": "CFD",
     "displayName": "Spain 35",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.1"
   },
@@ -243,7 +243,7 @@
     "name": "NZD_CHF",
     "type": "CURRENCY",
     "displayName": "NZD/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -251,7 +251,7 @@
     "name": "AUD_CHF",
     "type": "CURRENCY",
     "displayName": "AUD/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -259,7 +259,7 @@
     "name": "GBP_CHF",
     "type": "CURRENCY",
     "displayName": "GBP/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.04"
   },
@@ -267,7 +267,7 @@
     "name": "USD_THB",
     "type": "CURRENCY",
     "displayName": "USD/THB",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -275,7 +275,7 @@
     "name": "XAU_JPY",
     "type": "METAL",
     "displayName": "Gold/JPY",
-    "piplocation": null,
+    "pipLocation": 1,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -283,7 +283,7 @@
     "name": "XAU_HKD",
     "type": "METAL",
     "displayName": "Gold/HKD",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -291,7 +291,7 @@
     "name": "GBP_CAD",
     "type": "CURRENCY",
     "displayName": "GBP/CAD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -299,7 +299,7 @@
     "name": "EUR_HKD",
     "type": "CURRENCY",
     "displayName": "EUR/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -307,7 +307,7 @@
     "name": "CHF_JPY",
     "type": "CURRENCY",
     "displayName": "CHF/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.04"
   },
@@ -315,7 +315,7 @@
     "name": "GBP_HKD",
     "type": "CURRENCY",
     "displayName": "GBP/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -323,7 +323,7 @@
     "name": "EUR_NZD",
     "type": "CURRENCY",
     "displayName": "EUR/NZD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -331,7 +331,7 @@
     "name": "XAG_AUD",
     "type": "METAL",
     "displayName": "Silver/AUD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -339,7 +339,7 @@
     "name": "WTICO_USD",
     "type": "CFD",
     "displayName": "West Texas Oil",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -347,7 +347,7 @@
     "name": "XAG_NZD",
     "type": "METAL",
     "displayName": "Silver/NZD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -355,7 +355,7 @@
     "name": "AUD_SGD",
     "type": "CURRENCY",
     "displayName": "AUD/SGD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -363,7 +363,7 @@
     "name": "EUR_JPY",
     "type": "CURRENCY",
     "displayName": "EUR/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -371,7 +371,7 @@
     "name": "EUR_TRY",
     "type": "CURRENCY",
     "displayName": "EUR/TRY",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.25"
   },
@@ -379,7 +379,7 @@
     "name": "USD_JPY",
     "type": "CURRENCY",
     "displayName": "USD/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -387,7 +387,7 @@
     "name": "SGD_JPY",
     "type": "CURRENCY",
     "displayName": "SGD/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -395,7 +395,7 @@
     "name": "GBP_ZAR",
     "type": "CURRENCY",
     "displayName": "GBP/ZAR",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -403,7 +403,7 @@
     "name": "XAG_JPY",
     "type": "METAL",
     "displayName": "Silver/JPY",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -411,7 +411,7 @@
     "name": "ZAR_JPY",
     "type": "CURRENCY",
     "displayName": "ZAR/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -419,7 +419,7 @@
     "name": "CN50_USD",
     "type": "CFD",
     "displayName": "China A50",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.10"
   },
@@ -427,7 +427,7 @@
     "name": "AUD_JPY",
     "type": "CURRENCY",
     "displayName": "AUD/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -435,7 +435,7 @@
     "name": "NZD_USD",
     "type": "CURRENCY",
     "displayName": "NZD/USD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -443,7 +443,7 @@
     "name": "EUR_SEK",
     "type": "CURRENCY",
     "displayName": "EUR/SEK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -451,7 +451,7 @@
     "name": "USD_SGD",
     "type": "CURRENCY",
     "displayName": "USD/SGD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -459,7 +459,7 @@
     "name": "US2000_USD",
     "type": "CFD",
     "displayName": "US Russ 2000",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.10"
   },
@@ -467,7 +467,7 @@
     "name": "HKD_JPY",
     "type": "CURRENCY",
     "displayName": "HKD/JPY",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -475,7 +475,7 @@
     "name": "USD_CAD",
     "type": "CURRENCY",
     "displayName": "USD/CAD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -483,7 +483,7 @@
     "name": "AUD_USD",
     "type": "CURRENCY",
     "displayName": "AUD/USD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -491,7 +491,7 @@
     "name": "USB10Y_USD",
     "type": "CFD",
     "displayName": "US 10Y T-Note",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.20"
   },
@@ -499,7 +499,7 @@
     "name": "XAG_GBP",
     "type": "METAL",
     "displayName": "Silver/GBP",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -507,7 +507,7 @@
     "name": "HK33_HKD",
     "type": "CFD",
     "displayName": "Hong Kong 33",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.10"
   },
@@ -515,7 +515,7 @@
     "name": "NZD_SGD",
     "type": "CURRENCY",
     "displayName": "NZD/SGD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -523,7 +523,7 @@
     "name": "SPX500_USD",
     "type": "CFD",
     "displayName": "US SPX 500",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -531,7 +531,7 @@
     "name": "GBP_JPY",
     "type": "CURRENCY",
     "displayName": "GBP/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -539,7 +539,7 @@
     "name": "USD_TRY",
     "type": "CURRENCY",
     "displayName": "USD/TRY",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.25"
   },
@@ -547,7 +547,7 @@
     "name": "USD_NOK",
     "type": "CURRENCY",
     "displayName": "USD/NOK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -555,7 +555,7 @@
     "name": "USB02Y_USD",
     "type": "CFD",
     "displayName": "US 2Y T-Note",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.20"
   },
@@ -563,7 +563,7 @@
     "name": "XCU_USD",
     "type": "CFD",
     "displayName": "Copper",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -571,7 +571,7 @@
     "name": "XAG_EUR",
     "type": "METAL",
     "displayName": "Silver/EUR",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -579,7 +579,7 @@
     "name": "SGD_CHF",
     "type": "CURRENCY",
     "displayName": "SGD/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -587,7 +587,7 @@
     "name": "USD_CNH",
     "type": "CURRENCY",
     "displayName": "USD/CNH",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -595,7 +595,7 @@
     "name": "XAU_SGD",
     "type": "METAL",
     "displayName": "Gold/SGD",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -603,7 +603,7 @@
     "name": "CORN_USD",
     "type": "CFD",
     "displayName": "Corn",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -611,7 +611,7 @@
     "name": "EUR_CHF",
     "type": "CURRENCY",
     "displayName": "EUR/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.04"
   },
@@ -619,7 +619,7 @@
     "name": "EUR_SGD",
     "type": "CURRENCY",
     "displayName": "EUR/SGD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -627,7 +627,7 @@
     "name": "NZD_CAD",
     "type": "CURRENCY",
     "displayName": "NZD/CAD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -635,7 +635,7 @@
     "name": "CHINAH_HKD",
     "type": "CFD",
     "displayName": "China H Shares",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.1"
   },
@@ -643,7 +643,7 @@
     "name": "GBP_AUD",
     "type": "CURRENCY",
     "displayName": "GBP/AUD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -651,7 +651,7 @@
     "name": "USD_PLN",
     "type": "CURRENCY",
     "displayName": "USD/PLN",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -659,7 +659,7 @@
     "name": "EUR_ZAR",
     "type": "CURRENCY",
     "displayName": "EUR/ZAR",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -667,7 +667,7 @@
     "name": "NAS100_USD",
     "type": "CFD",
     "displayName": "US Nas 100",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -675,7 +675,7 @@
     "name": "TRY_JPY",
     "type": "CURRENCY",
     "displayName": "TRY/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.25"
   },
@@ -683,7 +683,7 @@
     "name": "SOYBN_USD",
     "type": "CFD",
     "displayName": "Soybeans",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -691,7 +691,7 @@
     "name": "XAU_XAG",
     "type": "METAL",
     "displayName": "Gold/Silver",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -699,7 +699,7 @@
     "name": "AU200_AUD",
     "type": "CFD",
     "displayName": "Australia 200",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -707,7 +707,7 @@
     "name": "XAU_CAD",
     "type": "METAL",
     "displayName": "Gold/CAD",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -715,7 +715,7 @@
     "name": "EU50_EUR",
     "type": "CFD",
     "displayName": "Europe 50",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -723,7 +723,7 @@
     "name": "EUR_AUD",
     "type": "CURRENCY",
     "displayName": "EUR/AUD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -731,7 +731,7 @@
     "name": "NL25_EUR",
     "type": "CFD",
     "displayName": "Netherlands 25",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.10"
   },
@@ -739,7 +739,7 @@
     "name": "USD_ZAR",
     "type": "CURRENCY",
     "displayName": "USD/ZAR",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -747,7 +747,7 @@
     "name": "CAD_JPY",
     "type": "CURRENCY",
     "displayName": "CAD/JPY",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -755,7 +755,7 @@
     "name": "NZD_HKD",
     "type": "CURRENCY",
     "displayName": "NZD/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -763,7 +763,7 @@
     "name": "XAU_NZD",
     "type": "METAL",
     "displayName": "Gold/NZD",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -771,7 +771,7 @@
     "name": "USD_CZK",
     "type": "CURRENCY",
     "displayName": "USD/CZK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -779,7 +779,7 @@
     "name": "USD_DKK",
     "type": "CURRENCY",
     "displayName": "USD/DKK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -787,7 +787,7 @@
     "name": "XAU_GBP",
     "type": "METAL",
     "displayName": "Gold/GBP",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -795,7 +795,7 @@
     "name": "USD_SEK",
     "type": "CURRENCY",
     "displayName": "USD/SEK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -803,7 +803,7 @@
     "name": "GBP_SGD",
     "type": "CURRENCY",
     "displayName": "GBP/SGD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -811,7 +811,7 @@
     "name": "EUR_DKK",
     "type": "CURRENCY",
     "displayName": "EUR/DKK",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -819,7 +819,7 @@
     "name": "BCO_USD",
     "type": "CFD",
     "displayName": "Brent Crude Oil",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -827,7 +827,7 @@
     "name": "CHF_ZAR",
     "type": "CURRENCY",
     "displayName": "CHF/ZAR",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -835,7 +835,7 @@
     "name": "CAD_CHF",
     "type": "CURRENCY",
     "displayName": "CAD/CHF",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.04"
   },
@@ -843,7 +843,7 @@
     "name": "XAG_SGD",
     "type": "METAL",
     "displayName": "Silver/SGD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -851,7 +851,7 @@
     "name": "XAU_CHF",
     "type": "METAL",
     "displayName": "Gold/CHF",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -859,7 +859,7 @@
     "name": "GBP_USD",
     "type": "CURRENCY",
     "displayName": "GBP/USD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -867,7 +867,7 @@
     "name": "USD_MXN",
     "type": "CURRENCY",
     "displayName": "USD/MXN",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -875,7 +875,7 @@
     "name": "USD_HUF",
     "type": "CURRENCY",
     "displayName": "USD/HUF",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -883,7 +883,7 @@
     "name": "JP225_USD",
     "type": "CFD",
     "displayName": "Japan 225",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -891,7 +891,7 @@
     "name": "USD_HKD",
     "type": "CURRENCY",
     "displayName": "USD/HKD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.1"
   },
@@ -899,7 +899,7 @@
     "name": "EUR_USD",
     "type": "CURRENCY",
     "displayName": "EUR/USD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -907,7 +907,7 @@
     "name": "SG30_SGD",
     "type": "CFD",
     "displayName": "Singapore 30",
-    "piplocation": null,
+    "pipLocation": -1,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.10"
   },
@@ -915,7 +915,7 @@
     "name": "EUR_CAD",
     "type": "CURRENCY",
     "displayName": "EUR/CAD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.03333333333333"
   },
@@ -923,7 +923,7 @@
     "name": "XAG_CAD",
     "type": "METAL",
     "displayName": "Silver/CAD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -931,7 +931,7 @@
     "name": "XPT_USD",
     "type": "CFD",
     "displayName": "Platinum",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -939,7 +939,7 @@
     "name": "XAU_EUR",
     "type": "METAL",
     "displayName": "Gold/EUR",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   },
@@ -947,7 +947,7 @@
     "name": "DE30_EUR",
     "type": "CFD",
     "displayName": "Germany 30",
-    "piplocation": null,
+    "pipLocation": 0,
     "tradeUnitsPrecision": 1,
     "marginRate": "0.05"
   },
@@ -955,7 +955,7 @@
     "name": "UK10YB_GBP",
     "type": "CFD",
     "displayName": "UK 10Y Gilt",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.20"
   },
@@ -963,7 +963,7 @@
     "name": "XPD_USD",
     "type": "CFD",
     "displayName": "Palladium",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -971,7 +971,7 @@
     "name": "NATGAS_USD",
     "type": "CFD",
     "displayName": "Natural Gas",
-    "piplocation": null,
+    "pipLocation": -2,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.10"
   },
@@ -979,7 +979,7 @@
     "name": "AUD_CAD",
     "type": "CURRENCY",
     "displayName": "AUD/CAD",
-    "piplocation": null,
+    "pipLocation": -4,
     "tradeUnitsPrecision": 0,
     "marginRate": "0.05"
   }
