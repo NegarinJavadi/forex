@@ -1,9 +1,12 @@
 
 import sys
 sys.path.append('/home/negarin/Desktop/Appendix/code')
-
+#import ssl
 import requests
+import pandas as pd
 import custom_constants.defs as defs
+from dateutil import parser
+from datetime import datetime as dt
 
 class OandaApi:
 
@@ -52,11 +55,47 @@ class OandaApi:
         return self.get_account_ep("instruments", "instruments")
     
     
+
+    def fetch_candles(self, pair_name, count=10, granularity="H1",
+                            price="MBA", date_f=None, date_t=None):
+        url = f"instruments/{pair_name}/candles"
+        params = dict(
+            granularity = granularity,
+            price = price
+        )
+
+        if date_f is not None and date_t is not None:
+            date_format = "%Y-%m-%dT%H:%M:%SZ"
+            params["from"] = dt.strftime(date_f, date_format)
+            params["to"] = dt.strftime(date_t, date_format)
+        else:
+            params["count"] = count
+
+        ok, data = self.make_request(url, params=params)    
+        if ok ==True and 'candles' in data:
+            return data['candles']
+        else:
+            print("ERROR fetch_candles()", params,data)
+            return None
+
+
+    def get_candles_df(self, data):
+        if len(data) ==0:
+            return pd.DataFrame() 
         
-
-
-
-
-
-
-    
+        prices = ['mid', 'bid', 'ask']
+        ohlc = ['o', 'h', 'l', 'c']
+        
+        final_data = []
+        for candle in data:
+            if candle['complete'] == False:
+                continue
+            new_dict = {}
+            new_dict['volume'] = candle['volume']
+            new_dict['time'] = parser.parse(candle['time']) #show time better
+            for p in prices:
+                for o in ohlc:
+                    new_dict[f"{p}-{o}"] = float(candle[p][o])
+            final_data.append(new_dict)
+        df = pd.DataFrame.from_dict(final_data)
+        return df
