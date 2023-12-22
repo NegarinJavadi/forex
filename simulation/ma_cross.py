@@ -1,8 +1,10 @@
 import pandas as pd
-import os.path
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
-sys.path.append('/home/negarin/Desktop/Appendix/code')
+sys.path.insert(0,main_dir)
 from infrastructure.instrument_collection import instrumentCollection as ic
+from simulation.ma_excel import create_ma_res
 
 class MAResult:
     def __init__(self, df_trades, pairname, ma_l, ma_s, granularity):
@@ -140,13 +142,13 @@ def analyse_pair(instrument, granularity, ma_long, ma_short, filepath):
             print(ma_result)
             results_list.append(ma_result)
     process_results(results_list, filepath)
-    pass
+    
 
 
-def run_ma_sim(curr_list=["EUR", "USD"],
-                granularity=["H1", "H4"],
-                ma_long=[20,40,80,120,150],
-                ma_short=[10,20,30,40],
+def run_ma_sim(curr_list=["CAD", "JPY", "GBP"],
+                granularity=["H1"],
+                ma_long=[20,40],
+                ma_short=[10],
                 filepath="./data"):
     ic.LoadInstruments("./data")
     for g in granularity:
@@ -155,6 +157,7 @@ def run_ma_sim(curr_list=["EUR", "USD"],
                 pair = f"{p1}_{p2}"
                 if pair in ic.instruments_dict.keys():
                     analyse_pair(ic.instruments_dict[pair], g, ma_long, ma_short, filepath)
+        create_ma_res(g)
         
 
 

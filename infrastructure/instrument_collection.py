@@ -1,5 +1,7 @@
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
-sys.path.append('/home/negarin/Desktop/Appendix/code')
+sys.path.append(main_dir)
 
 import json
 from models.instruments import Instrument

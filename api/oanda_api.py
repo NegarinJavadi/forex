@@ -1,4 +1,6 @@
 
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.append('/home/negarin/Desktop/Appendix/code')
 #import ssl
@@ -58,7 +60,7 @@ class OandaApi:
 
     def fetch_candles(self, pair_name, count=10, granularity="H1",
                             price="MBA", date_f=None, date_t=None):
-        url = f"instruments/{pair_name}/candles"
+        url = f"{defs.OANDA_URL}/instruments/{pair_name}/candles"
         params = dict(
             granularity = granularity,
             price = price
@@ -79,9 +81,14 @@ class OandaApi:
             return None
 
 
-    def get_candles_df(self, data):
+    def get_candles_df(self, pair_name, **kwargs):
+
+        data = self.fetch_candles(pair_name, **kwargs)
+
+        if data is None:
+            return None
         if len(data) ==0:
-            return pd.DataFrame() 
+            return pd.DataFrame()
         
         prices = ['mid', 'bid', 'ask']
         ohlc = ['o', 'h', 'l', 'c']
@@ -94,8 +101,9 @@ class OandaApi:
             new_dict['volume'] = candle['volume']
             new_dict['time'] = parser.parse(candle['time']) #show time better
             for p in prices:
-                for o in ohlc:
-                    new_dict[f"{p}-{o}"] = float(candle[p][o])
+                if p in candle:
+                    for o in ohlc:
+                        new_dict[f"{p}-{o}"] = float(candle[p][o])
             final_data.append(new_dict)
         df = pd.DataFrame.from_dict(final_data)
         return df

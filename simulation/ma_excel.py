@@ -1,5 +1,9 @@
 #from sys import float_repr_style
 import pandas as pd
+import os
+
+script_dir = os.path.dirname(os.path.realpath(__file__))
+base_path = os.path.join(script_dir, '..')
 
 WIDTHS = {
     'L:L' :20,
@@ -71,13 +75,21 @@ def create_excel(df_ma_res, df_ma_trades, granularity):
         df_ma_trades[df_ma_trades.granularity == granularity].copy(),
         writer)
 
-    writer.close()
+    writer._save()
+
+ma_res_path = os.path.join(base_path, "data/ma_res.pkl")
+ma_trades_path = os.path.join(base_path, "data/ma_trades.pkl")
+
+def create_ma_res(granularity):
+    df_ma_res = pd.read_pickle(ma_res_path)
+    df_ma_trades = pd.read_pickle(ma_trades_path)
+    create_excel(df_ma_res, df_ma_trades, granularity)
 
 
 if __name__ == "__main__":
 
-    df_ma_res = pd.read_pickle("/home/negarin/Desktop/Appendix/code/data/ma_res.pkl")
-    df_ma_trades = pd.read_pickle("/home/negarin/Desktop/Appendix/code/data/ma_trades.pkl")
+    df_ma_res = pd.read_pickle(ma_res_path)
+    df_ma_trades = pd.read_pickle(ma_trades_path)
 
     create_excel(df_ma_res, df_ma_trades, "H1")
     create_excel(df_ma_res, df_ma_trades, "H4")
