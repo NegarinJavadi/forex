@@ -109,7 +109,7 @@ def run_pair(pair):
 
 def run_ema_macd(ic: InstrumentCollection):
     results = []
-    our_curr = ['USD', 'GBP', 'JPY', 'NZD']
+    our_curr = ['USD', 'GBP', 'JPY', 'EUR']
     for p1 in our_curr:
         for p2 in our_curr:
             pair = f"{p1}_{p2}"
@@ -117,3 +117,15 @@ def run_ema_macd(ic: InstrumentCollection):
                 results = run_pair(pair)
                 results.to_pickle(f"./exploration/macd_ema/macd_ema_res_{pair}.pkl")
 
+if not os.path.isdir('./exploration/macd_ema/'):
+    print("Directory does not exist")
+    os.makedirs('./exploration/macd_ema/', exist_ok=True)
+else:
+    print("Directory exists")# Create an InstrumentCollection object
+
+# Check if the 'trades' subdirectory exists
+if not os.path.isdir('./exploration/macd_ema/trades/'):
+    print("'trades' subdirectory does not exist")
+    os.makedirs('./exploration/macd_ema/trades/', exist_ok=True)
+else:
+    print("'trades' subdirectory exists")

@@ -78,10 +78,12 @@ def create_excel(df_ma_res, df_ma_trades, granularity):
     writer._save()
 
 def create_ma_res(granularity):
-    df_ma_res = pd.read_pickle(ma_res_path)
-    df_ma_trades = pd.read_pickle(ma_trades_path)
+    df_ma_res = pd.read_pickle("./data/ma_re.pkl")
+    df_ma_trades = pd.read_pickle("./data/ma_trades.pkl")
     create_excel(df_ma_res, df_ma_trades, granularity)
 
+ma_res_path = os.path.join(base_path, "data/ma_res.pkl")
+ma_trades_path = os.path.join(base_path, "data/ma_trades.pkl")
 
 if __name__ == "__main__":
 
