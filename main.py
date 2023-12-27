@@ -7,8 +7,6 @@ from infrastructure.collect_data import run_collection
 
 
 if __name__ == '__main__':
-#    run_ma_sim()
-#    api = OandaApi()
     instrumentCollection.LoadInstruments("./data")
     run_ema_macd(instrumentCollection)
 #    run_collection(instrumentCollection, api)
