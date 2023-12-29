@@ -3,12 +3,15 @@ import os
 main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.append('/home/negarin/Desktop/Appendix/code')
-#import ssl
+
 import requests
 import pandas as pd
+import json
 import custom_constants.defs as defs
+
 from dateutil import parser
 from datetime import datetime as dt
+from infrastructure.instrument_collection import instrumentCollection as ic
 
 class OandaApi:
 
@@ -22,10 +25,17 @@ class OandaApi:
 
     def make_request(self, url, verb='get',  code=200, params=None, data=None, headers=None):
         full_url= f"{defs.OANDA_URL}/{url}"
+        
+        if data is not None:
+            data = json.dumps(data)
+
         try:
             response = None
             if verb =="get":
                 response= self.session.get(url, params= params, data= data, headers= headers)
+            if verb =="post":
+                response= self.session.post(url, params= params, data= data, headers= headers)
+
             if response ==None:
                 return False, {'error': 'verb not found'}
             if response.status_code ==code:
@@ -48,7 +58,6 @@ class OandaApi:
             print("ERROR get_account_ep()", data)
             return None
         
-
 
     def get_account_summary(self):
         return self.get_account_ep("summary", "account")
@@ -107,3 +116,37 @@ class OandaApi:
             final_data.append(new_dict)
         df = pd.DataFrame.from_dict(final_data)
         return df
+    
+    def place_trade(self,pair_name: str, units: float, direction: int,
+                    stop_loss: float=None, take_profit: float=None):
+        
+        base_url= 'https://api-fxpractice.oanda.com/v3/'
+        url = f"{base_url}accounts/{defs.ACCOUNT_ID}/orders"
+
+        instrument = ic.instruments_dict[pair_name]
+        units = round(units, instrument.tradeUnitsPrecision)
+
+        if direction == defs.SELL:
+            units = units * -1
+        
+        data = dict(
+            order=dict(
+                units=str(units),
+                instrument=pair_name,
+                type="MARKET"
+            )
+        )
+
+        if stop_loss is not None:
+            sld = dict(price=str(round(stop_loss, instrument.displayPrecision)))
+            data['order']['stopLossOnFill'] = sld
+
+        if take_profit is not None:
+            tpd = dict(price=str(round(take_profit, instrument.displayPrecision)))
+            data['order']['takeProfitOnFill'] = tpd
+
+        print(data)
+
+        ok, response = self.make_request(url, verb="post", data=data, code=201)
+
+        print(ok, response)

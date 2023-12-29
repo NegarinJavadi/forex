@@ -1,13 +1,15 @@
 class Instrument:
 
     def __init__(self, name, ins_type, displayName,
-                 pipLocation, tradeUnitsPrecision, marginRate):
+                 pipLocation, tradeUnitsPrecision, marginRate,
+                 displayPrecision):
         self.name = name
         self.ins_type = ins_type
         self.displayName = displayName
         self.pipLocation = pow(10, pipLocation) if pipLocation is not None else None
         self.tradeUnitsPrecision = tradeUnitsPrecision
         self.marginRate = float(marginRate) if marginRate is not None else None
+        self.displayPrecision = displayPrecision
 
 
 
@@ -24,6 +26,7 @@ class Instrument:
           ob.get('pipLocation', None),
           ob.get('tradeUnitsPrecision'),
           ob.get('marginRate'),
+          ob.get('displayPrecision')
 
          )
 
