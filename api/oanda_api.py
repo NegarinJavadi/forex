@@ -12,15 +12,14 @@ import custom_constants.defs as defs
 from dateutil import parser
 from datetime import datetime as dt
 from infrastructure.instrument_collection import instrumentCollection as ic
+from models.open_trade import OpenTrade
+from models.api_price import ApiPrice
 
 class OandaApi:
 
     def __init__(self):
         self.session = requests.Session()
-        self.session.headers.update({
-             "Authorization": f"Bearer {defs.API_KEY}",
-             "Content-Type":"application/json"
-         })
+        self.session.headers.update(defs.SECURE_HEADER)
         
 
     def make_request(self, url, verb='get',  code=200, params=None, data=None, headers=None):
@@ -35,6 +34,8 @@ class OandaApi:
                 response= self.session.get(url, params= params, data= data, headers= headers)
             if verb =="post":
                 response= self.session.post(url, params= params, data= data, headers= headers)
+            if verb =="put":
+                response= self.session.put(url, params= params, data= data, headers= headers)
 
             if response ==None:
                 return False, {'error': 'verb not found'}
@@ -116,6 +117,13 @@ class OandaApi:
             final_data.append(new_dict)
         df = pd.DataFrame.from_dict(final_data)
         return df
+
+    def last_complete_candle(self, pair_name, granularity):
+        df = self.get_candles_df(pair_name, granularity=granularity, count=10)
+        if df.shape[0] == 0:
+            return None
+        return df.iloc[-1].time
+
     
     def place_trade(self,pair_name: str, units: float, direction: int,
                     stop_loss: float=None, take_profit: float=None):
@@ -128,6 +136,8 @@ class OandaApi:
 
         if direction == defs.SELL:
             units = units * -1
+        if direction == defs.BUY:
+            units = units * 1
         
         data = dict(
             order=dict(
@@ -145,8 +155,57 @@ class OandaApi:
             tpd = dict(price=str(round(take_profit, instrument.displayPrecision)))
             data['order']['takeProfitOnFill'] = tpd
 
-        print(data)
+        #print(data)
 
         ok, response = self.make_request(url, verb="post", data=data, code=201)
 
-        print(ok, response)
+        #print(ok, response)
+
+        if ok == True and 'orderFillTransaction' in response:
+            return response['orderFillTransaction']['id']
+        else:
+            return None
+     
+    def close_trade(self, trade_id):
+        base_url= 'https://api-fxpractice.oanda.com/v3/'
+        url = f"{base_url}accounts/{defs.ACCOUNT_ID}/trades/{trade_id}/close"
+        ok, _ = self.make_request(url, verb="put", code=200)
+
+        if ok == True:
+            print(f"Closed {trade_id} successfully")
+        else:
+            print(f"Failed to close {trade_id}")
+
+        return ok
+    
+    def get_open_trade(self, trade_id):
+        base_url= 'https://api-fxpractice.oanda.com/v3/'
+        url = f"{base_url}accounts/{defs.ACCOUNT_ID}/trades/{trade_id}"
+        ok, response = self.make_request(url)
+
+        if ok == True and 'trade' in response:
+            return OpenTrade(response['trade'])
+            
+    def get_open_trades(self):
+        base_url= 'https://api-fxpractice.oanda.com/v3/'
+        url = f"{base_url}accounts/{defs.ACCOUNT_ID}/openTrades"
+        ok, response = self.make_request(url)
+
+        if ok == True and 'trades' in response:
+            return [OpenTrade(x) for x in response['trades']]
+        
+    def get_prices(self, instruments_list):
+        base_url= 'https://api-fxpractice.oanda.com/v3/'
+        url = f"{base_url}accounts/{defs.ACCOUNT_ID}/pricing"
+
+        params = dict(
+            instruments = ','.join(instruments_list),
+            includeHomeConversions = True
+        )
+
+        ok, response = self.make_request(url, params=params)
+
+        if ok == True and 'prices' in response and 'homeConversions' in response:
+            return [ApiPrice(x, response['homeConversions']) for x in response['prices']]
+        
+        return None

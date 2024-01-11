@@ -1,0 +1,2 @@
+2024-01-05 19:03:51 Logwrapper init() ./logs/GBP_JPY.log
+2024-01-05 19:03:51 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.5}
