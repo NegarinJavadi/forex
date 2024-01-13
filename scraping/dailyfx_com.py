@@ -9,16 +9,20 @@ def dailyfx_com():
     resp = session.get('https://www.dailyfx.com/sentiment')
 
 
-    #resp = requests.get('https://www.dailyfx.com/sentiment')
-
-    #print(resp.content)
-    #print(resp.status_code)
-
     soup = BeautifulSoup(resp.content, 'html.parser')
-
-    #print(soup)
-
     rows = soup.select(".dfx-technicalSentimentCard")
 
+    pair_data = []
+
     for r in rows:
-        print(r)
+        card = r.select_one(".dfx-technicalSentimentCard__pairAndSignal")
+        change_values = r.select(".dfx-technicalSentimentCard__changeValue")
+        pair_data.append(dict(
+            pair = card.select_one('a').get_text().replace("/", "_").strip(),
+            sentiment = card.select_one('span').get_text().strip(),
+            longs_d = change_values[0].get_text().strip(),
+            sharts_d = change_values[1].get_text().strip(),
+            longs_w = change_values[3].get_text().strip(),
+            shorts_w = change_values[4].get_text().strip()
+        ))
+    return pd.DataFrame.from_dict(pair_data)
