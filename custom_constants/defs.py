@@ -10,3 +10,5 @@ SECURE_HEADER = {
 SELL = -1
 BUY = 1
 NONE = 0
+
+MONGO_CONN_STR = "mongodb+srv://Negarin:<Negarin610>@negarin.j2jmyuo.mongodb.net/?retryWrites=true&w=majority"
