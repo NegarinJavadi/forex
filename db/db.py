@@ -21,6 +21,5 @@ class DataDB:
     
         print(self.db.list_collection_names())
     
-    print(MONGO_CONN_STR)
 
 
