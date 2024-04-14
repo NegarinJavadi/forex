@@ -1,3 +1,8 @@
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
+import sys
+sys.path.append(main_dir)
+
 import pandas as pd
 import datetime as dt
 from dateutil import parser
@@ -46,6 +51,7 @@ def fetch_candles(pair, granularity, date_f: dt.datetime,
             break
 
         attempts +=1
+
 
     if candles_df is not None and candles_df.empty == False:
         return candles_df
@@ -103,8 +109,8 @@ def run_collection(ic:InstrumentCollection, api:OandaApi):
                     collect_data(
                         pair,
                         granularity,
-                        "2016-01-07T00:00:00Z",
-                        "2021-12-31T00:00:00Z",
+                        "2021-10-01T00:00:00Z",
+                        "2024-03-10T00:00:00Z",
                         "./data/",
                         api
                     )

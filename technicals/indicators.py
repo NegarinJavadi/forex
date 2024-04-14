@@ -41,7 +41,7 @@ def RSI(df: pd.DataFrame, n=14):
 
     rs = wins_rma / losses_rma
 
-    df[f"RSI_{n}"] = 100.0 - (100.0 / (1 + rs))
+    df[f"RSI_{n}"] = 100.0 - (100.0 / (1.0 + rs))
     return df
 
 def MACD(df: pd.DataFrame, n_slow=26, n_fast=12, n_signal=9):

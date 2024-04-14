@@ -31,11 +31,11 @@ class OandaApi:
         try:
             response = None
             if verb =="get":
-                response= self.session.get(url, params= params, data= data, headers= headers)
+                response= self.session.get(full_url, params= params, data= data, headers= headers)
             if verb =="post":
-                response= self.session.post(url, params= params, data= data, headers= headers)
+                response= self.session.post(full_url, params= params, data= data, headers= headers)
             if verb =="put":
-                response= self.session.put(url, params= params, data= data, headers= headers)
+                response= self.session.put(full_url, params= params, data= data, headers= headers)
 
             if response ==None:
                 return False, {'error': 'verb not found'}
@@ -52,7 +52,8 @@ class OandaApi:
     def get_account_ep(self, ep, data_key):
         base_url= 'https://api-fxpractice.oanda.com/v3/'
         url= f"{base_url}accounts/{defs.ACCOUNT_ID}/{ep}"
-        ok, data= self.make_request(url)
+        ok, data= self.make_request(url);
+
         if ok ==True and data_key in data:
             return data[data_key]
         else:
@@ -209,3 +210,4 @@ class OandaApi:
             return [ApiPrice(x, response['homeConversions']) for x in response['prices']]
         
         return None
+    

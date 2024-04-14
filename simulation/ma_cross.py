@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import os.path
 main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.insert(0,main_dir)
@@ -46,7 +47,7 @@ def is_trade(row):
         return SELL
     return NONE    
 
-def load_price_date(pair, granularity, ma_list):
+def load_price_data(pair, granularity, ma_list):
     df = pd.read_pickle(f"./data/{pair}_{granularity}.pkl")
     for ma in ma_list:
         df[get_ma_col(ma)] = df['mid-c'].rolling(window=ma).mean()
@@ -66,8 +67,8 @@ def get_trades(df_analysis, instrument, granularity):
     return df_trades
 
 
-def assess_pair(price_date, ma_l, ma_s, instrument, granularity):
-    df_analysis = price_date.copy()
+def assess_pair(price_data, ma_l, ma_s, instrument, granularity):
+    df_analysis = price_data.copy()
     df_analysis["DELTA"] = df_analysis[ma_s] - df_analysis[ma_l]
     df_analysis["DELTA_PREV"] = df_analysis["DELTA"].shift(1)
     df_analysis["TRADE"] = df_analysis.apply(is_trade, axis=1)
@@ -119,7 +120,7 @@ def analyse_pair(instrument, granularity, ma_long, ma_short, filepath):
     ma_list = set(ma_long + ma_short)
     pair = instrument.name
 
-    price_date = load_price_date(pair, granularity, ma_list)
+    price_data = load_price_data(pair, granularity, ma_list)
     #print(pair)
     #print(price_date.head(3))
 
@@ -132,7 +133,7 @@ def analyse_pair(instrument, granularity, ma_long, ma_short, filepath):
                 continue
 
             ma_result = assess_pair(
-                price_date,
+                price_data,
                 get_ma_col(ma_l),
                 get_ma_col(ma_s),
                 instrument,
@@ -145,7 +146,7 @@ def analyse_pair(instrument, granularity, ma_long, ma_short, filepath):
     
 
 
-def run_ma_sim(curr_list=["CAD", "JPY", "GBP"],
+def run_ma_sim(curr_list=["CAD", "JPY", "GBP", "NZD"],
                 granularity=["H1"],
                 ma_long=[20,40],
                 ma_short=[10],

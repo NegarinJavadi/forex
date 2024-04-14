@@ -15,10 +15,13 @@ class DataDB:
     INSTRUMENTS_COLL = "forex_instruments"
 
     def __init__(self):
+        try:
+            self.client = MongoClient(MONGO_CONN_STR)
+            self.db = self.client.forex_learning
+        except errors.ConnectionFailure as e:
+            print(f"Failed to connect to MongoDB: {e}")
+            sys.exit(1)
 
-        self.client = MongoClient(MONGO_CONN_STR)
-        self.db = self.client.forex_learning
-        
 
     def test_connection(self):
     
@@ -70,5 +73,4 @@ class DataDB:
             return data
         except errors.InvalidOperation as error:
             print("query_all error:", error)
-
 

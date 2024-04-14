@@ -1,3 +1,8 @@
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
+import sys
+sys.path.append('/home/negarin/Desktop/Appendix/code')
+
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
@@ -6,8 +11,8 @@ import datetime as dt
 import random
 
 from dateutil import parser
-
 from db.db import DataDB
+
 
 pd.set_option("display.max_rows", None)
 
@@ -92,14 +97,19 @@ def fx_calendar():
     
     #final_data = []
 
-    start = parser.parse("2022-03-28T00:00:00Z")
-    end = parser.parse("2023-01-18T00:00Z")
-
-    database = DataDB()
+    start = parser.parse("2023-02-01T00:00:00Z")
+    end = parser.parse("2024-02-18T00:00:00Z")
     
+    database = DataDB()
+
     while start < end:
         data = get_fx_calendar(start)
         print(start, len(data))
+        example_data = [
+        {"data": "2024-01-17", "country": "GBP", "event": "CPI", "actual": 4, "previous":3.9, "forecast":3.8}
+        ]
+        database.add_many(DataDB.CALENDAR_COLL, example_data)
+        database.query_all(DataDB.CALENDAR_COLL)
         database.add_many(DataDB.CALENDAR_COLL, data)
         start = start + dt.timedelta(days=7)
         time.sleep(random.randint(1,4))
