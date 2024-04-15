@@ -1,10 +1,10 @@
 import os
+import sys
+
+main_dir = os.path.join(os.path.dirname(__file__), '..')
+sys.path.insert(0, main_dir)
 
 from db.db import DataDB
-main_dir = os.path.join(os.path.dirname(__file__), '..')
-import sys
-sys.path.append(main_dir)
-
 import json
 from models.instruments import Instrument
 

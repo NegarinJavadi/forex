@@ -59,6 +59,7 @@ def fetch_candles(pair, granularity, date_f: dt.datetime,
         return None
 
 
+
 def collect_data(pair, granularity, date_f, date_t, file_prefix, api:OandaApi):
     
     time_step = INCREMENTS[granularity]

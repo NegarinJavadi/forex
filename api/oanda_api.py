@@ -2,7 +2,7 @@
 import os
 main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
-sys.path.append('/home/negarin/Desktop/Appendix/code')
+sys.path.insert(0,main_dir)
 
 import requests
 import pandas as pd
@@ -31,11 +31,11 @@ class OandaApi:
         try:
             response = None
             if verb =="get":
-                response= self.session.get(full_url, params= params, data= data, headers= headers)
+                response = self.session.get(full_url, params= params, data= data, headers= headers)
             if verb =="post":
-                response= self.session.post(full_url, params= params, data= data, headers= headers)
+                response = self.session.post(full_url, params= params, data= data, headers= headers)
             if verb =="put":
-                response= self.session.put(full_url, params= params, data= data, headers= headers)
+                response = self.session.put(full_url, params= params, data= data, headers= headers)
 
             if response ==None:
                 return False, {'error': 'verb not found'}
@@ -68,15 +68,28 @@ class OandaApi:
         return self.get_account_ep("instruments", "instruments")
     
     
-
     def fetch_candles(self, pair_name, count=10, granularity="H1",
-                            price="MBA", date_f=None, date_t=None):
-        url = f"{defs.OANDA_URL}/instruments/{pair_name}/candles"
-        params = dict(
-            granularity = granularity,
-            price = price
-        )
+                       price="MBA",date_f=None, date_t=None):
+        """
+        Fetches candlestick data for a given instrument.
 
+        Args:
+            instrument (str): The instrument symbol (e.g., "EUR_USD").
+            granularity (str): The granularity of the candles (default: "D" for daily).
+            price (str): The price component to fetch (default: "MB" for midpoint).
+            count (int): The number of candles to retrieve (default: 10).
+
+        Returns:
+            list: List of candlestick data (each item is a dictionary).
+        """
+        # Construct the endpoint URL
+        endpoint = f"instruments/{pair_name}/candles"
+        params = {
+            "granularity": granularity,
+            "price": price,
+            "count": count
+        }
+        
         if date_f is not None and date_t is not None:
             date_format = "%Y-%m-%dT%H:%M:%SZ"
             params["from"] = dt.strftime(date_f, date_format)
@@ -84,11 +97,15 @@ class OandaApi:
         else:
             params["count"] = count
 
-        ok, data = self.make_request(url, params=params)    
-        if ok ==True and 'candles' in data:
-            return data['candles']
+    
+        # Make the API request
+        ok, data = self.make_request(endpoint, verb="get", params=params)
+
+        if ok:
+        # Extract the candlestick data (assuming it's in the "candles" key)
+            return data.get("candles", [])
         else:
-            print("ERROR fetch_candles()", params,data)
+            print(f"ERROR fetch_candles() {params} {data}")
             return None
 
 

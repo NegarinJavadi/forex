@@ -1,6 +1,6 @@
-API_KEY = "e9edd0f4d7b9c5dc04fc440a5bfbafb4-591e523c41eb0439e5c364d772708588"
+API_KEY = "39c92c26d426cd80aea158e639fe42eb-732f53d33748678f48d4ae448fe6d286"
 ACCOUNT_ID = "101-004-27643856-001"
-OANDA_URL = "https://api-fxpractice.oanda.com/v3"
+OANDA_URL = "https://api-fxpractice.oanda.com/v3/"
 
 SECURE_HEADER = {
     "Authorization": f"Bearer {API_KEY}",

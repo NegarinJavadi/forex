@@ -1,7 +1,7 @@
 import os
 main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
-sys.path.append('/home/negarin/Desktop/Appendix/code')
+sys.path.insert(0,main_dir)
 
 from pymongo import MongoClient, errors
 from custom_constants.defs import MONGO_CONN_STR
