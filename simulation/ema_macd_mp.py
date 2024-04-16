@@ -133,7 +133,6 @@ def run_ema_macd(ic: InstrumentCollection):
 
     while current < len(pairs):
 
-
         processes = []
         todo = len(pairs) - current
         if todo < limit:

@@ -86,8 +86,7 @@ class OandaApi:
         endpoint = f"instruments/{pair_name}/candles"
         params = {
             "granularity": granularity,
-            "price": price,
-            "count": count
+            "price": price
         }
         
         if date_f is not None and date_t is not None:
