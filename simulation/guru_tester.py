@@ -47,7 +47,6 @@ def create_signals(df, time_d=1):
     return df_signals
 
 
-
 class Trade:
     def __init__(self, row, profit_factor, loss_factor):
         self.running = True
@@ -122,10 +121,15 @@ class GuruTester:
 
         df_m5_slim = self.df_m5[['time','bid-h', 'bid-l', 'ask-h', 'ask-l' ]].copy()
         df_signals = create_signals(self.df_big, time_d=self.time_d)
-
+        #print(df_m5_slim)
+        #print(df_signals)
+        self.merged = pd.concat([df_m5_slim, df_signals], axis=1)
         self.merged = pd.merge(left=df_m5_slim, right=df_signals, on='time', how='left')
+        #self.merged = pd.concat([df_m5_slim.set_index('time'), df_signals.set_index('time')], axis=1)
         self.merged.fillna(0, inplace=True)
         self.merged.SIGNAL = self.merged.SIGNAL.astype(int)
+        
+
 
     def run_test(self):
         #print("run_test...")

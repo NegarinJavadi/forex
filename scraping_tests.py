@@ -10,7 +10,6 @@ if __name__ == "__main__":
     #bloomberg_com()
     #print(bloomberg_com())
     #[print(x) for x in bloomberg_com()]
+
     #investing_com()
-    #print(investing_com())
-    #print(dailyfx_com())
-    
+    #print(investing_com()) 

@@ -64,13 +64,15 @@ def get_fx_calendar(from_date):
 
     headers = {
         "User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0",
-        "Cookie": f"calendar-importance=3; cal-custom-range=2{fr_d_str}|{to_d_str}; TEServer=TEIIS2; cal-timezone-offset=0"
+        "Cookie": f"calendar-importance=3; cal-custom-range=2022-03-28 00:00|2022-04-2 00:00; cal-timezone-offset=0; TEServer=TEIIS"
     }
 
     resp = session.get("https://tradingeconomics.com/calendar", headers=headers)
 
 
     soup = BeautifulSoup(resp.content, 'html.parser')
+
+    print(soup)
 
     table = soup.select_one("table#calendar")
 
@@ -98,19 +100,16 @@ def fx_calendar():
     #final_data = []
 
     start = parser.parse("2023-02-01T00:00:00Z")
-    end = parser.parse("2024-02-18T00:00:00Z")
+    end = parser.parse("2024-04-24T00:00:00Z")
     
     database = DataDB()
 
     while start < end:
         data = get_fx_calendar(start)
         print(start, len(data))
-        example_data = [
-        {"data": "2024-01-17", "country": "GBP", "event": "CPI", "actual": 4, "previous":3.9, "forecast":3.8}
-        ]
-        database.add_many(DataDB.CALENDAR_COLL, example_data)
-        database.query_all(DataDB.CALENDAR_COLL)
         database.add_many(DataDB.CALENDAR_COLL, data)
+        #database.query_all(DataDB.CALENDAR_COLL)
+        #database.add_many(DataDB.CALENDAR_COLL, data)
         start = start + dt.timedelta(days=7)
         time.sleep(random.randint(1,4))
 

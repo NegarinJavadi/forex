@@ -63,4 +63,4 @@ class PriceStreamer(StreamBase):
                     if timer() - start > PriceStreamer.LOG_FREQ:
                         print(LiveApiPrice(decoded_price).get_dict())
                         self.log_data()
-                        strat = timer()
+                        start = timer()

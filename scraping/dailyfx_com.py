@@ -26,3 +26,4 @@ def dailyfx_com():
             shorts_w = change_values[4].get_text().strip()
         ))
     return pd.DataFrame.from_dict(pair_data)
+    

@@ -5,14 +5,18 @@ sys.path.insert(0,main_dir)
 
 from api.oanda_api import OandaApi
 from infrastructure.instrument_collection import instrumentCollection
-from simulation.ma_cross import run_ma_sim
-from simulation.ema_macd import run_ema_macd
-from dateutil import parser
-from infrastructure.collect_data import run_collection
+from stream_example.streamer import run_streamer
+from db.db import DataDB
 
+def db_tests():
+    d = DataDB()
+
+    print(d.query_all(DataDB.SAMPLE_COLL))
 
 if __name__ == '__main__':
     #api = OandaApi()
-    instrumentCollection.LoadInstruments("./data")
-    run_ema_macd(instrumentCollection)
+    #instrumentCollection.LoadInstruments("./data")
+    #d = DataDB()
+    #d.test_connection()
+    db_tests()
 

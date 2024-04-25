@@ -142,9 +142,6 @@ class GuruTesterFast:
         self.merged.SIGNAL = self.merged.SIGNAL.astype(int)
 
         
-
-
-
     def run_test(self):
         print("run_test...")
         open_trades_m5 = []

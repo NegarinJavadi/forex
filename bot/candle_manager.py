@@ -11,7 +11,7 @@ class CandleManager:
         self.pairs_list = list(self.trade_settings.keys())
         self.timings = { p: CandleTiming(self.api.last_complete_candle(p, self.granularity)) for p in self.pairs_list}
         for p, t in self.timings.items():
-            self.log_message(f"CandleManager() init last_cande:{t}", p)
+            self.log_message(f"CandleManager() init last_candle:{t}", p)
     
     def update_timings(self):
         triggered = []

@@ -40,11 +40,13 @@ def prepare_data(df: pd.DataFrame, slow, fast, signal, ema):
 
 def load_data(pair, time_d=1):
 
-    start = parser.parse("2020-10-01T00:00:00Z")
-    end = parser.parse("2021-01-01T00:00:00Z")
+    start = parser.parse("2021-10-01T00:00:00Z")
+    end = parser.parse("2022-01-01T00:00:00Z")
 
     df = pd.read_pickle(f"./data/{pair}_H{time_d}.pkl")
+    #print(df)
     df_m5 = pd.read_pickle(f"./data/{pair}_M5.pkl")
+    #print(df_m5)
 
     df = df[(df.time>=start)&(df.time<end)]
     df_m5 = df_m5[(df_m5.time>=start)&(df_m5.time<end)]
@@ -72,6 +74,8 @@ def simulate_params(pair, df, df_m5,  slow, fast, signal, ema, time_d):
     gt.df_results['ema'] = ema
     gt.df_results['pair'] = pair
 
+    #print
+    print(gt.df_results.head())
     return gt.df_results
 
 def run_pair(pair):
@@ -92,7 +96,8 @@ def run_pair(pair):
             for signal in [9,12]:
                 for ema in [50,100]:
                     sim_res_df = simulate_params(pair, df, df_m5, slow, fast, signal, ema, time_d)
-                    r = sim_res_df.result.sum()
+                    #r = sim_res_df.result.sum()
+                    r = sim_res_df['result'].sum()
                     trades.append(sim_res_df)
                     print(f"--> {pair} {slow} {fast} {ema} {signal} {r}")
                     results.append(dict(

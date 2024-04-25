@@ -1,7 +1,27 @@
-2024-01-05 19:03:51 Logwrapper init() ./logs/main.log
-2024-01-05 19:03:51 Bot started with Trade Settings:
+2024-04-22 09:18:33 Logwrapper init() ./logs/main.log
+2024-04-22 09:18:33 Bot started with Trade Settings:
 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
+{'n_ma': 10, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.5}
-{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.5}
+{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
+{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
 
-
+2024-04-22 09:18:39 Bot started
+2024-04-22 09:20:00 process_candles triggered:['GBP_JPY', 'GBP_USD']
+2024-04-22 09:20:21 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'EUR_GBP']
+2024-04-22 09:25:06 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
+2024-04-22 09:30:01 process_candles triggered:['EUR_GBP']
+2024-04-22 09:30:16 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD']
+2024-04-22 09:35:00 process_candles triggered:['GBP_USD']
+2024-04-22 09:35:18 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'EUR_GBP']
+2024-04-22 09:40:13 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
+2024-04-22 09:45:07 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
+2024-04-22 09:50:05 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
+2024-04-22 09:55:09 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
+2024-04-22 10:00:02 process_candles triggered:['GBP_JPY', 'GBP_USD', 'EUR_GBP']
+2024-04-22 10:00:27 process_candles triggered:['GBP_CHF', 'EUR_CHF']
+2024-04-22 10:05:09 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
+2024-04-22 10:10:03 process_candles triggered:['GBP_USD']
+2024-04-22 10:10:23 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'EUR_GBP']
+2024-04-22 10:15:04 process_candles triggered:['EUR_GBP']
+2024-04-22 10:15:23 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD']

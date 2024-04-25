@@ -15,6 +15,6 @@ class TradeSettings:
         ret_str = "Trade Settings:\n"
         for _, v in settings.items():
             ret_str += f"{v}\n"
-        ret_str += "\n"
+        #ret_str += "\n"
 
         return ret_str

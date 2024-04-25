@@ -21,10 +21,11 @@ def bloomberg_com():
 
     soup = BeautifulSoup(resp.content, 'html.parser')
 
-    headline = soup.select_one('a[href="/news/articles/2024-01-12/argentina-bonds-gain-as-milei-s-rework-passes-crucial-tests?srnd=fx-center"]')
+    #headline = soup.select_one('[href="/news/articles/2024-04-24/china-carbon-price-tops-100-yuan-for-first-time-as-rules-tighten?srnd=fx-center"]')
+    headline = soup.select_one('[hover="underline"][focus="underline"][data-component="headline"]')
     
     print(headline)
-
+'''
     #all_links = []
     #all_links.append(get_article(headline))
 
@@ -37,3 +38,9 @@ def bloomberg_com():
     #[all_links.append(get_article(x)) for x in side_articles]
 
     #return all_links
+
+<div class="hover:underline focus:underline" data-component="headline"><a href="/news/articles/2024-04-24/china-carbon-price-tops-100-yuan-for-first-time-as-rules-tighten?srnd=fx-center"
+    <a href="/news/articles/2024-04-24/china-carbon-price-tops-100-yuan-for-first-time-as-rules-tighten?srnd=fx-center"
+    <div class="styles_storyInfo__iq1t7"><div class="capitalize text-sm mb-[5px] capitalize" data-component="eyebrow"><a href="/green" class="hover:underline">Green</a></div><div class="hover:underline focus:underline" data-component="headline"><a href="/news/articles/2024-04-24/china-carbon-price-tops-100-yuan-for-first-time-as-rules-tighten?srnd=fx-center">China Carbon Price Tops 100 Yuan For First Time as Rules Tighten<div></div><div></div><div></div></a></div><div class="media-ui-RecentTimestamp_wrapper-8RcZT34kfjY-" data-component="recent-timestamp"><time class="media-ui-RelativeDate_relativeDate-R4FcKtXV8S0-" datetime="2024-04-24T07:50:13.353Z" data-locale="en">31 minutes ago</time></div></div>
+'''
+    

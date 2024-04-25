@@ -1,9 +1,9 @@
 import os
 main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
-sys.path.append('/home/negarin/Desktop/Appendix/code')
-import pandas as pd
+sys.path.insert(0,main_dir)
 
+import pandas as pd
 pd.set_option('display.max_columns', None)
 pd.set_option('expand_frame_repr', False)
 
@@ -12,6 +12,7 @@ from api.oanda_api import OandaApi
 from models.trade_settings import TradeSettings
 from models.trade_decision import TradeDecision
 import custom_constants.defs as defs
+
 
 ADDROWS = 20
 
@@ -66,7 +67,7 @@ def fetch_candles(pair, row_count, candle_time, granularity,
         return None
     
     if df.iloc[-1].time != candle_time:
-        log_message("tech_manager fetch_candles {df.iloc[-1].time} not correct", pair)
+        log_message(f"tech_manager fetch_candles {df.iloc[-1].time} not correct", pair)
         return None
     
     return df
@@ -83,5 +84,4 @@ def get_trade_decision(candle_time, pair, granularity, api: OandaApi,
     if df is not None:
         last_row = process_candles(df, pair, trade_settings, log_message)
         return TradeDecision(last_row)
-
     return None
