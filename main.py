@@ -11,12 +11,11 @@ from db.db import DataDB
 def db_tests():
     d = DataDB()
 
-    print(d.query_all(DataDB.SAMPLE_COLL))
+    print(d.query_distinct(DataDB.SAMPLE_COLL, 'age'))
 
 if __name__ == '__main__':
-    #api = OandaApi()
-    #instrumentCollection.LoadInstruments("./data")
-    #d = DataDB()
-    #d.test_connection()
     db_tests()
+    #api = OandaApi()
+    #instrumentCollection.CreateDB(api.get_account_instruments())
+    #instrumentCollection.LoadInstruments("./data")
 

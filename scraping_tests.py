@@ -12,4 +12,4 @@ if __name__ == "__main__":
     #[print(x) for x in bloomberg_com()]
 
     #investing_com()
-    #print(investing_com()) 
+    #print(investing_com())  

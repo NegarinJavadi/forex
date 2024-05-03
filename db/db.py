@@ -7,7 +7,6 @@ from pymongo import MongoClient, errors
 from custom_constants.defs import MONGO_CONN_STR
 
 
-
 class DataDB:
 
     SAMPLE_COLL = "forex_sample"

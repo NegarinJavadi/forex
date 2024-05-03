@@ -147,7 +147,7 @@ class OandaApi:
         
         base_url= 'https://api-fxpractice.oanda.com/v3'
         #url = f"{base_url}accounts/{defs.ACCOUNT_ID}/orders"
-        endpoint = f"/accounts/{defs.ACCOUNT_ID}/orders"
+        url = f"/accounts/{defs.ACCOUNT_ID}/orders"
         
 
         instrument = ic.instruments_dict[pair_name]
@@ -176,7 +176,7 @@ class OandaApi:
 
         #print(data)
 
-        ok, response = self.make_request(endpoint, verb="post", data=data, code=201)
+        ok, response = self.make_request(url, verb="post", data=data, code=201)
 
         #print(ok, response)
 
@@ -188,8 +188,8 @@ class OandaApi:
     def close_trade(self, trade_id):
         base_url= 'https://api-fxpractice.oanda.com/v3/'
         #url = f"{base_url}accounts/{defs.ACCOUNT_ID}/trades/{trade_id}/close"
-        endpoint = f"accounts/{defs.ACCOUNT_ID}/trades/{trade_id}/close"
-        ok, _ = self.make_request(endpoint, verb="put", code=200)
+        url = f"accounts/{defs.ACCOUNT_ID}/trades/{trade_id}/close"
+        ok, _ = self.make_request(url, verb="put", code=200)
 
         if ok == True:
             print(f"Closed {trade_id} successfully")
@@ -201,8 +201,8 @@ class OandaApi:
     def get_open_trade(self, trade_id):
         base_url= 'https://api-fxpractice.oanda.com/v3/'
         #url = f"{base_url}accounts/{defs.ACCOUNT_ID}/trades/{trade_id}"
-        endpoint = f"accounts/{defs.ACCOUNT_ID}/trades/{trade_id}"
-        ok, response = self.make_request(endpoint)
+        url = f"accounts/{defs.ACCOUNT_ID}/trades/{trade_id}"
+        ok, response = self.make_request(url)
 
         if ok == True and 'trade' in response:
             return OpenTrade(response['trade'])
@@ -210,8 +210,8 @@ class OandaApi:
     def get_open_trades(self):
         base_url= 'https://api-fxpractice.oanda.com/v3/'
         #url = f"{base_url}accounts/{defs.ACCOUNT_ID}/openTrades"
-        endpoint = f"accounts/{defs.ACCOUNT_ID}/openTrades"
-        ok, response = self.make_request(endpoint)
+        url = f"accounts/{defs.ACCOUNT_ID}/openTrades"
+        ok, response = self.make_request(url)
 
         if ok == True and 'trades' in response:
             return [OpenTrade(x) for x in response['trades']]
@@ -219,14 +219,14 @@ class OandaApi:
     def get_prices(self, instruments_list):
         base_url= 'https://api-fxpractice.oanda.com/v3/'
         #url = f"{base_url}accounts/{defs.ACCOUNT_ID}/pricing"
-        endpoint = f"accounts/{defs.ACCOUNT_ID}/pricing"
+        url = f"accounts/{defs.ACCOUNT_ID}/pricing"
 
         params = dict(
             instruments = ','.join(instruments_list),
             includeHomeConversions = True
         )
 
-        ok, response = self.make_request(endpoint, params=params)
+        ok, response = self.make_request(url, params=params)
 
         if ok == True and 'prices' in response and 'homeConversions' in response:
             return [ApiPrice(x, response['homeConversions']) for x in response['prices']]
