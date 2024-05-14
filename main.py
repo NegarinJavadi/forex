@@ -8,14 +8,12 @@ from infrastructure.instrument_collection import instrumentCollection
 from stream_example.streamer import run_streamer
 from db.db import DataDB
 
-def db_tests():
-    d = DataDB()
-
-    print(d.query_distinct(DataDB.SAMPLE_COLL, 'age'))
 
 if __name__ == '__main__':
-    db_tests()
-    #api = OandaApi()
+   
+    api = OandaApi()
+    instrumentCollection.LoadInstrumentsDB()
+    print(instrumentCollection.instruments_dict)
     #instrumentCollection.CreateDB(api.get_account_instruments())
     #instrumentCollection.LoadInstruments("./data")
 

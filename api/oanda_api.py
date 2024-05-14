@@ -11,7 +11,6 @@ import custom_constants.defs as defs
 
 from dateutil import parser
 from datetime import datetime as dt
-from infrastructure.instrument_collection import instrumentCollection as ic
 from models.open_trade import OpenTrade
 from models.api_price import ApiPrice
 
@@ -27,6 +26,12 @@ class OandaApi:
         
         if data is not None:
             data = json.dumps(data)
+
+              # Add your headers here
+        headers = {
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {defs.API_KEY}',
+        }
 
         try:
             response = None
@@ -50,8 +55,7 @@ class OandaApi:
         
  
     def get_account_ep(self, ep, data_key):
-        base_url= 'https://api-fxpractice.oanda.com/v3/'
-        url= f"{base_url}accounts/{defs.ACCOUNT_ID}/{ep}"
+        url= f"accounts/{defs.ACCOUNT_ID}/{ep}"
         ok, data= self.make_request(url)
 
         if ok ==True and data_key in data:
@@ -141,13 +145,28 @@ class OandaApi:
             return None
         return df.iloc[-1].time
 
-    
+    def web_api_candles(self, pair_name, granularity, count):
+        df = self.get_candles_df(pair_name, granularity=granularity, count=count)
+        if df.shape[0] == 0:
+            return None
+        
+        cols = ['time', 'mid-o', 'mid-h', 'mid-l', 'mid-c']
+        df = df[cols].copy()
+
+        df['time'] = df.time.dt.strftime("%y-%m-%d %H:%M")
+
+        return df.to_dict(orient='list')
+
     def place_trade(self,pair_name: str, units: float, direction: int,
                     stop_loss: float=None, take_profit: float=None):
         
+
+         # Import instrumentCollection inside the method where it's used
+        from infrastructure.instrument_collection import instrumentCollection as ic
+
         base_url= 'https://api-fxpractice.oanda.com/v3'
         #url = f"{base_url}accounts/{defs.ACCOUNT_ID}/orders"
-        url = f"/accounts/{defs.ACCOUNT_ID}/orders"
+        url = f"/accounts/{defs.ACCOUNT_ID}/instruments"
         
 
         instrument = ic.instruments_dict[pair_name]

@@ -14,28 +14,9 @@ from api import oanda_api
 
 class InstrumentCollection:
     FILENAME = "instruments.json"
-    API_KEYS = ['name', 'type', 'displayName','pipLocation', 
-                'displayPrecision', 'tradeUnitsPrecision', 'marginRate']
+    API_KEYS = ['name', 'type', 'displayName', 'pipLocation',
+         'displayPrecision', 'tradeUnitsPrecision', 'marginRate']
     
-
-    def get_account_instruments(self, ACCOUNT_ID):
-        base_url = 'https://api-fxpractice.oanda.com/V3/'
-        endpoint = f'/accounts/{defs.ACCOUNT_ID}/instruments'
-        url = base_url + endpoint
-        
-        headers = {
-            'Authorization': 'Bearer YOUR_API_KEY_HERE'
-        }
-        
-        try:
-            response = requests.get(url, headers=headers)
-            response.raise_for_status()  # Raise an exception for 4xx or 5xx status codes
-            data = response.json()
-            return data
-        except requests.exceptions.RequestException as e:
-            print(f"Error making API request: {e}")
-            return None
-
 
     def __init__(self):
         self.instruments_dict = {}
@@ -53,6 +34,8 @@ class InstrumentCollection:
     def LoadInstrumentsDB(self):
         self.instruments_dict = {}
         data = DataDB().query_single(DataDB.INSTRUMENTS_COLL)
+        #data = DataDB().query_single('forex_calendar')
+        #relevant_data = {k: v for k, v in data.items() if hasattr(v, 'get')}
         for k, v in data.items():
             self.instruments_dict[k] = Instrument.FromApiObject(v)
 
@@ -80,12 +63,11 @@ class InstrumentCollection:
         instruments_dict = {}
         for i in data:
             key = i['name']
-            if key is not None:
-                instruments_dict[key] = { k: i[k] for k in self.API_KEYS}
-            
-            database = DataDB()
-            database.delete_many(DataDB.INSTRUMENTS_COLL)
-            database.add_one(DataDB.INSTRUMENTS_COLL, instruments_dict)
+            instruments_dict[key] = { k: i[k] for k in self.API_KEYS }
+
+        database = DataDB()
+        database.delete_many(DataDB.INSTRUMENTS_COLL)
+        database.add_one(DataDB.INSTRUMENTS_COLL, instruments_dict)
 
 
     def PrintInstruments(self):

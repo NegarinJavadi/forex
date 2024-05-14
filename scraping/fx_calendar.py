@@ -37,6 +37,7 @@ def get_data_for_key(tr, key):
     return ''
 
 def get_data_dict(item_date, table_rows):
+    
     data = []
 
     for tr in table_rows:
@@ -54,17 +55,20 @@ def get_data_dict(item_date, table_rows):
     return data
 
 
-def get_fx_calendar(from_date, to_date):
+def get_fx_calendar(from_date):
     session = requests.Session()
     base_url = 'https://tradingeconomics.com/calendar'
 
     fr_d_str = dt.datetime.strftime(from_date, "%Y-%m-%d 00:00:00")
-    #to_date = from_date + dt.timedelta(days=6)
+    to_date = from_date + dt.timedelta(days=6)
     to_d_str = dt.datetime.strftime(to_date, "%Y-%m-%d 00:00:00")
+   
+
 
     headers = {
-        "User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0",
-        "Cookie": "calendar-importance=3; cal-custom-range={fr_d_str}|{to_d_str}; TEServer=TEIIS2; cal-timezone-offset=0;"
+        "User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0",
+        
+        "Cookie": f"calendar-importance=3; cal-custom-range={fr_d_str}|{to_d_str}; cal-timezone-offset=0; TEServer=TEIIS"
     }
 
     resp = session.get(base_url, headers=headers)
@@ -94,19 +98,20 @@ def get_fx_calendar(from_date, to_date):
 
 def fx_calendar():
     
-    final_data = []
+    #final_data = []
 
-    start_date = parser.parse("2023-10-27T00:00:00Z")
-    end_date = parser.parse("2024-02-26T00:00:00Z")
-
+    start = parser.parse("2023-12-27T00:00:00Z")
+    end = parser.parse("2024-05-05T00:00:00Z")
+    
     database = DataDB()
 
-    while start_date < end_date:
-        data = get_fx_calendar(start_date, start_date + dt.timedelta(days=6))
-        print(start_date, len(data))
-        database.add_many(DataDB.CALENDAR_COLL, final_data)
-        start_date += dt.timedelta(days=7)
+    while start < end:
+        #data = get_fx_calendar(start, start + dt.timedelta(days=6))
+        data = get_fx_calendar(start)
+        print(start, len(data))
+        database.add_many(DataDB.CALENDAR_COLL, data)
+        start += dt.timedelta(days=7)
         time.sleep(random.randint(1,4))
 
-    print(pd.DataFrame.from_dict(final_data))
+    #print(pd.DataFrame.from_dict(final_data))
 
