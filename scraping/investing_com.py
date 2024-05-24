@@ -1,72 +1,115 @@
-from bs4 import BeautifulSoup
-import pandas as pd
-import requests
 import time
+import logging
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import datetime as dt
 
-#data_keys = []
+logging.basicConfig(level=logging.DEBUG)
 
-'''
-def get_data_object(text_list, pair_id, time_frame):
+data_keys = [
+    'pair_name',
+    'S1',
+    'S2',
+    'S3',
+    'Pivot Points',
+    'R1',
+    'R2',
+    'R3'
+]
+
+def get_data_object(driver, pair_id, time_frame):
     data = {}
     data['pair_id'] = pair_id
     data['time_frame'] = time_frame
-    data['updated'] = dt.datetime.utcnow()
-
-    for item in text_list:
-        temp_item = item.split("=")
-        if len(temp_item) == 2 and temp_item[0] in data_keys:
-            data[temp_item[0]] = temp_item[1]
-    #if 'pair_name' in data:
-    #    data['pair_name'] = data['pair_name'].replace("/", "_")
+    data['updated'] = dt.datetime.now(dt.timezone.utc)
+    
+    selectors = {
+        'pair_name': '.pair-name',  
+        'S1': '.s1',
+        'S2': '.s2',
+        'S3': '.s3',
+        'Pivot Points': '.pivot',
+        'R1': '.r1',
+        'R2': '.r2',
+        'R3': '.r3'
+    }
+    
+    for key in data_keys:
+        try:
+            element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, selectors[key]))
+            )
+            data[key] = element.text.strip()
+        except Exception as e:
+            logging.error(f"Error fetching {key}: {e}")
+            data[key] = None
     
     return data
 
-'''
+def scrape_investing_com(pair_id, time_frame):
+    url = f"https://www.investing.com/technical/Service/GetStudiesContent?action=get_studies&pair_ID={pair_id}&time_frame={time_frame}"
+    logging.info(f"Fetching URL: {url}")
+    options = webdriver.FirefoxOptions()  
+    options.add_argument('--headless')
 
-def investing_com(text_list):
-#def investing_com_fetch(pair_id, time_frame):
-
-    headers = {
-        "User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0"
-    }
-
-    params = dict(
-        #action = 'get_studies',
-        #pair_ID = 7,
-        #time_frame = 3600
-    )
-    resp = requests.post("https://www.investing.com/technical/Service/GetStudiesContent",
-                         headers=headers, timeout=10)
     
-    print(resp.content)
-    print(resp.status_code)
+    driver_path = "/path/to/geckodriver"
+    
+    try:
+        driver = webdriver.Firefox(executable_path=driver_path, options=options)
+        driver.set_page_load_timeout(60)  
+    except Exception as e:
+        logging.error(f"Failed to start WebDriver: {e}")
+        return {}
 
-    #text = resp.content.decode("utf-8")
+    try:
+        driver.get(url)
+        WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".pair-name")))
+        data = get_data_object(driver, pair_id, time_frame)
+    except Exception as e:
+        logging.error(f"Error while scraping data for pair_id {pair_id}, time_frame {time_frame}: {e}")
+        logging.error(driver.page_source)
+        data = {}
+    finally:
+        driver.quit()
 
-    #print(text)
+    return data
 
-    #index_start = text.index("pair_name=")
-    #index_end = text.index("*;*quote_link")
+def investing_com():
+    pair_id = 1  
+    time_frame = 3600  
+    logging.info(f"Fetching data for pair_id: {pair_id}, time_frame: {time_frame}")
+    data = scrape_investing_com(pair_id, time_frame)
+    if data:
+        logging.info(data)
+    else:
+        logging.info("No data found")
 
-    #print(text[index_start:index_end])
-    #date_str = text[index_start:index_end]
+investing_com()
 
-    #split_date_str = date_str.split('*;*')
 
-    #[print(x) for x in split_date_str]
-    #keys = [x.split("=")[0] for x in split_date_str]
-    #print(keys)
-
-    #print(get_data_objcet(date_str.split('*;*')))
-    #return get_data_objcet(date_str.split('*;*'), pair_id, time_frame)
 '''
 def investing_com():
-    data = []
+    all_data = []
     for pair_id in range(1, 12):
         for time_frame in [3600, 86400]:
-            print(pair_id, time_frame)
-            data.append(investing_com_fetch(pair_id, time_frame))
+            print(f"Fetching data for pair_id: {pair_id}, time_frame: {time_frame}")
+            data = scrape_investing_com(pair_id, time_frame)
+            if data:
+                all_data.append(data)
             time.sleep(0.5)
-    return pd.DataFrame.from_dict(data)
+    
+    # Convert the list of dictionaries to a DataFrame
+    df = pd.DataFrame(all_data)
+    print(df)
+
+investing_com()
 '''
+
+
+
+
+
+

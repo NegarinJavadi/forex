@@ -55,23 +55,25 @@ def bloomberg_com():
 def bloomberg_com():
     url = 'https://www.bloomberg.com'
     headers = {
-        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
-    }
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+}
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()  
+        soup = BeautifulSoup(response.content, 'html.parser')
 
-    # Send a GET request to the Bloomberg website
-    response = requests.get(url, headers=headers)
+        headline_elements = soup.select('.latest-news__headline-text')
 
-    # Parse the HTML content of the webpage using BeautifulSoup
-    soup = BeautifulSoup(response.content, 'html.parser')
+        if headline_elements:
+            for headline in headline_elements:
+            
+                headline_text = headline.get_text(strip=True)
+                print(f"Headline: {headline_text}")
+                print("------------------------")
+            else:
+                print("No headlines found on the page.")
 
-    # Define the CSS selector to target the headline elements
-    headline_elements = soup.select('.story-package-module__headline')
-
-    if headline_elements:
-        for headline in headline_elements:
-            # Extract headline text
-            headline_text = headline.get_text(strip=True)
-            print(f"Headline: {headline_text}")
-            print("------------------------")
-    else:
-        print("No headlines found on the page.")
+    except requests.exceptions.RequestException as e:
+        print(f"Error making HTTP request: {e}")
+    except Exception as ex:
+        print(f"An error occurred: {ex}")

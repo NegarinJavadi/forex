@@ -7,9 +7,9 @@ from scraping.fx_calendar import fx_calendar
 if __name__ == "__main__":
     #print(fx_calendar())
      
-    bloomberg_com()
+    #bloomberg_com()
     #print(bloomberg_com())
     #[print(x) for x in bloomberg_com()]
 
-    #investing_com()
-    #print(investing_com())  
+    df= investing_com()
+    print(df)  

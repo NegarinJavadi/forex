@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investing.com Data Fetcher</title>
+</head>
+<body>
+    <button id="fetchDataButton">Fetch Data</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("fetchDataButton").addEventListener("click", function() {
+            fetchData();
+        });
+
+        function fetchData() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        parseData(xhr.responseText);
+                    } else {
+                        console.error('Request failed with status:', xhr.status);
+                    }
+                }
+            };
+            xhr.open("GET", "https://www.investing.com/technical/Service/GetStudiesContent?action=get_studies&pair_ID=1&time_frame=3600", true);
+            xhr.send();
+        }
+
+        function parseData(responseText) {
+            // Parse the response text here and extract the required data
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerText = responseText; // Display the response text for now
+        }
+    </script>
+</body>
+</html>

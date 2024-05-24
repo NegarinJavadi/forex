@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS 
 from api.oanda_api import OandaApi
 import http
+from scraping.fx_calendar import fx_calendar
 
 app = Flask(__name__)
 CORS(app)
@@ -28,11 +29,11 @@ def account():
 @app.route("/api/technicals/<pair>/<tf>")
 def technicals(pair, tf)
     return get_response(get_pair(pair, tf))
-'''
+
 @app.route("/api/prices/<pair>/<granularity>/<count>")
 def prices(pair, granularity, count):
     return get_response(OandaApi().web_api_candles(pair, granularity, count))
-
+'''
 if __name__ == "__main__":
     app.run(debug=True)
 
