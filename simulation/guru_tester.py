@@ -8,26 +8,39 @@ NONE = 0
 def apply_take_profit(row, PROFIT_FACTOR):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
-            return (row['ask-c'] - row['ask-o']) * PROFIT_FACTOR + row['ask-c']
+            if row.direction == BUY:
+                return (row['ask_c'] - row['ask_o']) * PROFIT_FACTOR + row['ask_c']
+            else:
+                return (row['ask_o'] - row['ask_c']) * PROFIT_FACTOR + row['ask_o']
         else:
-            return (row['bid-c'] - row['bid-o']) * PROFIT_FACTOR + row['bid-c']
+            if row.direction == SELL:
+                return (row['bid_c'] - row['bid_o']) * PROFIT_FACTOR + row['ask_c']
+            else:
+                return (row['bid_o'] - row['bid_c']) * PROFIT_FACTOR + row['ask_o']
     else:
         return 0.0
+        
 
 def apply_stop_loss(row):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
-            return row['ask-o']
+            if row.direction == BUY:
+                return row['ask_o']
+            else:
+                return row['ask_c']
         else:
-            return row['bid-o']
+            if row.direction == SELL:
+                return row['bid_o']
+            else:
+                return row['bid_c']
     else:
         return 0.0
 
 def remove_spread(df):
     for a in ["ask", "bid"]:
         for b in ["o", "h", "l", "c"]:
-            c = f"{a}-{b}"
-            df[c] = df[f"mid-{b}"]
+            c = f"{a}_{b}"
+            df[c] = df[f"mid_{b}"]
 
 def apply_signals(df, PROFIT_FACTOR, sig):
     df["SIGNAL"] = df.apply(sig, axis=1)
@@ -37,11 +50,11 @@ def apply_signals(df, PROFIT_FACTOR, sig):
 def create_signals(df, time_d=1):
     df_signals = df[df.SIGNAL != NONE].copy() 
     df_signals['m5_start'] = [x + dt.timedelta(hours=time_d) for x in df_signals.time]
-    df_signals.drop(['time', 'mid-o', 'mid-h', 'mid-l', 'bid-o', 'bid-h', 'bid-l',
-    'ask-o', 'ask-h', 'ask-l', 'direction'], axis=1, inplace=True)
+    df_signals.drop(['time', 'mid_o', 'mid_h', 'mid_l', 'bid_o', 'bid_h', 'bid_l',
+    'ask_o', 'ask_h', 'ask_l', 'direction'], axis=1, inplace=True)
     df_signals.rename(columns={
-        'bid-c' : 'start_price_BUY',
-        'ask-c' : 'start_price_SELL',
+        'bid_c' : 'start_price_BUY',
+        'ask_c' : 'start_price_SELL',
         'm5_start' : 'time'
     }, inplace=True)
     return df_signals
@@ -77,15 +90,15 @@ class Trade:
         
     def update(self, row):
         if self.SIGNAL == BUY:
-            if row['bid-h'] >= self.TP:
-                self.close_trade(row, self.profit_factor, row['bid-h'])
-            elif row['bid-l'] <= self.SL:
-                self.close_trade(row, self.loss_factor, row['bid-l'])
+            if row['bid_h'] >= self.TP:
+                self.close_trade(row, self.profit_factor, row['bid_h'])
+            elif row['bid_l'] <= self.SL:
+                self.close_trade(row, self.loss_factor, row['bid_l'])
         if self.SIGNAL == SELL:
-            if row['ask-l'] <= self.TP:
-                self.close_trade(row, self.profit_factor, row['ask-l'])
-            elif row['ask-h'] >= self.SL:
-                self.close_trade(row, self.loss_factor, row['ask-h'])   
+            if row['ask_l'] <= self.TP:
+                self.close_trade(row, self.profit_factor, row['ask_l'])
+            elif row['ask_h'] >= self.SL:
+                self.close_trade(row, self.loss_factor, row['ask_h'])   
 
 class GuruTester:
     def __init__(self, df_big,
@@ -119,7 +132,7 @@ class GuruTester:
                     self.apply_signal)
 
 
-        df_m5_slim = self.df_m5[['time','bid-h', 'bid-l', 'ask-h', 'ask-l' ]].copy()
+        df_m5_slim = self.df_m5[['time','bid_h', 'bid_l', 'ask_h', 'ask_l' ]].copy()
         df_signals = create_signals(self.df_big, time_d=self.time_d)
         #print(df_m5_slim)
         #print(df_signals)

@@ -4,7 +4,7 @@
 2024-04-22 09:20:00 CandleManager() new candle:last_candle:24-04-22 05:45 is_ready:True
 2024-04-22 09:20:01 tech_manager: max_rows:32 candle_time:2024-04-22 05:45:00+00:00 granularity:M5
 2024-04-22 09:20:05 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 05:25:00+00:00  1.23844  1.23832  0.0  0.0  0.00019  0.000189  1.23844       0
 27  GBP_USD 2024-04-22 05:30:00+00:00  1.23836  1.23844  0.0  0.0  0.00020  0.000244  1.23836       0
 28  GBP_USD 2024-04-22 05:35:00+00:00  1.23821  1.23834  0.0  0.0  0.00018  0.000345  1.23821       0
@@ -13,7 +13,7 @@
 2024-04-22 09:25:06 CandleManager() new candle:last_candle:24-04-22 05:50 is_ready:True
 2024-04-22 09:25:11 tech_manager: max_rows:32 candle_time:2024-04-22 05:50:00+00:00 granularity:M5
 2024-04-22 09:25:11 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 05:30:00+00:00  1.23836  1.23844  0.0  0.0  0.00020  0.000244  1.23836       0
 27  GBP_USD 2024-04-22 05:35:00+00:00  1.23821  1.23834  0.0  0.0  0.00018  0.000345  1.23821       0
 28  GBP_USD 2024-04-22 05:40:00+00:00  1.23820  1.23820  0.0  0.0  0.00017  0.000294  1.23820       0
@@ -22,7 +22,7 @@
 2024-04-22 09:30:16 CandleManager() new candle:last_candle:24-04-22 05:55 is_ready:True
 2024-04-22 09:30:21 tech_manager: max_rows:32 candle_time:2024-04-22 05:55:00+00:00 granularity:M5
 2024-04-22 09:30:22 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 05:35:00+00:00  1.23821  1.23834  0.0  0.0  0.00018  0.000345  1.23821       0
 27  GBP_USD 2024-04-22 05:40:00+00:00  1.23820  1.23820  0.0  0.0  0.00017  0.000294  1.23820       0
 28  GBP_USD 2024-04-22 05:45:00+00:00  1.23835  1.23822  0.0  0.0  0.00016  0.000095  1.23835       0
@@ -31,7 +31,7 @@
 2024-04-22 09:35:00 CandleManager() new candle:last_candle:24-04-22 06:00 is_ready:True
 2024-04-22 09:35:00 tech_manager: max_rows:32 candle_time:2024-04-22 06:00:00+00:00 granularity:M5
 2024-04-22 09:35:00 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 27  GBP_USD 2024-04-22 05:40:00+00:00  1.23820  1.23820  0.0  0.0  0.00017  0.000294  1.23820       0
 28  GBP_USD 2024-04-22 05:45:00+00:00  1.23835  1.23822  0.0  0.0  0.00016  0.000095  1.23835       0
 29  GBP_USD 2024-04-22 05:50:00+00:00  1.23845  1.23834  0.0  0.0  0.00018  0.000038  1.23845       0
@@ -40,7 +40,7 @@
 2024-04-22 09:40:12 CandleManager() new candle:last_candle:24-04-22 06:05 is_ready:True
 2024-04-22 09:40:18 tech_manager: max_rows:32 candle_time:2024-04-22 06:05:00+00:00 granularity:M5
 2024-04-22 09:40:22 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 05:45:00+00:00  1.23835  1.23822  0.0  0.0  0.00016  0.000095  1.23835       0
 27  GBP_USD 2024-04-22 05:50:00+00:00  1.23845  1.23834  0.0  0.0  0.00018  0.000038  1.23845       0
 28  GBP_USD 2024-04-22 05:55:00+00:00  1.23836  1.23842  0.0  0.0  0.00018  0.000023  1.23836       0
@@ -49,7 +49,7 @@
 2024-04-22 09:45:07 CandleManager() new candle:last_candle:24-04-22 06:10 is_ready:True
 2024-04-22 09:45:08 tech_manager: max_rows:32 candle_time:2024-04-22 06:10:00+00:00 granularity:M5
 2024-04-22 09:45:08 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 05:50:00+00:00  1.23845  1.23834  0.0  0.0  0.00018  0.000038  1.23845       0
 27  GBP_USD 2024-04-22 05:55:00+00:00  1.23836  1.23842  0.0  0.0  0.00018  0.000023  1.23836       0
 28  GBP_USD 2024-04-22 06:00:00+00:00  1.23852  1.23833  0.0  0.0  0.00017  0.000151  1.23852       0
@@ -58,7 +58,7 @@
 2024-04-22 09:50:05 CandleManager() new candle:last_candle:24-04-22 06:15 is_ready:True
 2024-04-22 09:50:06 tech_manager: max_rows:32 candle_time:2024-04-22 06:15:00+00:00 granularity:M5
 2024-04-22 09:50:07 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 05:55:00+00:00  1.23836  1.23842  0.0  0.0  0.00018  0.000023  1.23836       0
 27  GBP_USD 2024-04-22 06:00:00+00:00  1.23852  1.23833  0.0  0.0  0.00017  0.000151  1.23852       0
 28  GBP_USD 2024-04-22 06:05:00+00:00  1.23873  1.23850  0.0  0.0  0.00020  0.000353  1.23873       0
@@ -67,7 +67,7 @@
 2024-04-22 09:55:05 CandleManager() new candle:last_candle:24-04-22 06:20 is_ready:True
 2024-04-22 09:55:14 tech_manager: max_rows:32 candle_time:2024-04-22 06:20:00+00:00 granularity:M5
 2024-04-22 09:55:15 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 06:00:00+00:00  1.23852  1.23833  0.0  0.0  0.00017  0.000151  1.23852       0
 27  GBP_USD 2024-04-22 06:05:00+00:00  1.23873  1.23850  0.0  0.0  0.00020  0.000353  1.23873       0
 28  GBP_USD 2024-04-22 06:10:00+00:00  1.23821  1.23872  0.0  0.0  0.00018  0.000159  1.23821       0
@@ -76,7 +76,7 @@
 2024-04-22 10:00:02 CandleManager() new candle:last_candle:24-04-22 06:25 is_ready:True
 2024-04-22 10:00:07 tech_manager: max_rows:32 candle_time:2024-04-22 06:25:00+00:00 granularity:M5
 2024-04-22 10:00:07 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 06:05:00+00:00  1.23873  1.23850  0.0  0.0  0.00020  0.000353  1.23873       0
 27  GBP_USD 2024-04-22 06:10:00+00:00  1.23821  1.23872  0.0  0.0  0.00018  0.000159  1.23821       0
 28  GBP_USD 2024-04-22 06:15:00+00:00  1.23836  1.23822  0.0  0.0  0.00017  0.000002  1.23836       0
@@ -85,7 +85,7 @@
 2024-04-22 10:05:09 CandleManager() new candle:last_candle:24-04-22 06:30 is_ready:True
 2024-04-22 10:05:10 tech_manager: max_rows:32 candle_time:2024-04-22 06:30:00+00:00 granularity:M5
 2024-04-22 10:05:10 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 06:10:00+00:00  1.23821  1.23872  0.0  0.0  0.00018  0.000159  1.23821       0
 27  GBP_USD 2024-04-22 06:15:00+00:00  1.23836  1.23822  0.0  0.0  0.00017  0.000002  1.23836       0
 28  GBP_USD 2024-04-22 06:20:00+00:00  1.23830  1.23832  0.0  0.0  0.00019  0.000049  1.23830       0
@@ -94,7 +94,7 @@
 2024-04-22 10:10:03 CandleManager() new candle:last_candle:24-04-22 06:35 is_ready:True
 2024-04-22 10:10:03 tech_manager: max_rows:32 candle_time:2024-04-22 06:35:00+00:00 granularity:M5
 2024-04-22 10:10:07 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 06:15:00+00:00  1.23836  1.23822  0.0  0.0  0.00017  0.000002  1.23836       0
 27  GBP_USD 2024-04-22 06:20:00+00:00  1.23830  1.23832  0.0  0.0  0.00019  0.000049  1.23830       0
 28  GBP_USD 2024-04-22 06:25:00+00:00  1.23824  1.23830  0.0  0.0  0.00015  0.000099  1.23824       0
@@ -103,7 +103,7 @@
 2024-04-22 10:15:19 CandleManager() new candle:last_candle:24-04-22 06:40 is_ready:True
 2024-04-22 10:15:24 tech_manager: max_rows:32 candle_time:2024-04-22 06:40:00+00:00 granularity:M5
 2024-04-22 10:15:24 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_USD 2024-04-22 06:20:00+00:00  1.23830  1.23832  0.0  0.0  0.00019  0.000049  1.23830       0
 27  GBP_USD 2024-04-22 06:25:00+00:00  1.23824  1.23830  0.0  0.0  0.00015  0.000099  1.23824       0
 28  GBP_USD 2024-04-22 06:30:00+00:00  1.23824  1.23824  0.0  0.0  0.00018  0.000084  1.23824       0

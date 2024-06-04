@@ -1,0 +1,3 @@
+2024-06-03 06:07:45 Logwrapper init() ./logs/SocketConnection.log
+2024-06-03 06:08:21 WebSocket error occurred: [Errno -3] Temporary failure in name resolution
+2024-06-03 06:08:21 WebSocket connection closed with code: None, message: None

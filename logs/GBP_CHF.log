@@ -4,7 +4,7 @@
 2024-04-22 09:20:16 CandleManager() new candle:last_candle:24-04-22 05:45 is_ready:True
 2024-04-22 09:20:22 tech_manager: max_rows:32 candle_time:2024-04-22 05:45:00+00:00 granularity:M5
 2024-04-22 09:20:22 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid-_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 05:25:00+00:00  1.12903  1.12902  0.0  0.0  0.00020  0.000178  1.12903       0
 27  GBP_CHF 2024-04-22 05:30:00+00:00  1.12913  1.12902  0.0  0.0  0.00020  0.000064  1.12913       0
 28  GBP_CHF 2024-04-22 05:35:00+00:00  1.12922  1.12912  0.0  0.0  0.00019  0.000039  1.12922       0
@@ -13,7 +13,7 @@
 2024-04-22 09:25:01 CandleManager() new candle:last_candle:24-04-22 05:50 is_ready:True
 2024-04-22 09:25:06 tech_manager: max_rows:32 candle_time:2024-04-22 05:50:00+00:00 granularity:M5
 2024-04-22 09:25:06 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 05:30:00+00:00  1.12913  1.12902  0.0  0.0  0.00020  0.000064  1.12913       0
 27  GBP_CHF 2024-04-22 05:35:00+00:00  1.12922  1.12912  0.0  0.0  0.00019  0.000039  1.12922       0
 28  GBP_CHF 2024-04-22 05:40:00+00:00  1.12942  1.12923  0.0  0.0  0.00017  0.000234  1.12942       0
@@ -22,7 +22,7 @@
 2024-04-22 09:30:15 CandleManager() new candle:last_candle:24-04-22 05:55 is_ready:True
 2024-04-22 09:30:16 tech_manager: max_rows:32 candle_time:2024-04-22 05:55:00+00:00 granularity:M5
 2024-04-22 09:30:17 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 05:35:00+00:00  1.12922  1.12912  0.0  0.0  0.00019  0.000039  1.12922       0
 27  GBP_CHF 2024-04-22 05:40:00+00:00  1.12942  1.12923  0.0  0.0  0.00017  0.000234  1.12942       0
 28  GBP_CHF 2024-04-22 05:45:00+00:00  1.12924  1.12942  0.0  0.0  0.00021  0.000058  1.12924       0
@@ -31,7 +31,7 @@
 2024-04-22 09:35:15 CandleManager() new candle:last_candle:24-04-22 06:00 is_ready:True
 2024-04-22 09:35:18 tech_manager: max_rows:32 candle_time:2024-04-22 06:00:00+00:00 granularity:M5
 2024-04-22 09:35:20 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 05:40:00+00:00  1.12942  1.12923  0.0  0.0  0.00017  0.000234  1.12942       0
 27  GBP_CHF 2024-04-22 05:45:00+00:00  1.12924  1.12942  0.0  0.0  0.00021  0.000058  1.12924       0
 28  GBP_CHF 2024-04-22 05:50:00+00:00  1.12905  1.12924  0.0  0.0  0.00018  0.000121  1.12905       0
@@ -40,7 +40,7 @@
 2024-04-22 09:40:10 CandleManager() new candle:last_candle:24-04-22 06:05 is_ready:True
 2024-04-22 09:40:13 tech_manager: max_rows:32 candle_time:2024-04-22 06:05:00+00:00 granularity:M5
 2024-04-22 09:40:17 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 05:45:00+00:00  1.12924  1.12942  0.0  0.0  0.00021  0.000058  1.12924       0
 27  GBP_CHF 2024-04-22 05:50:00+00:00  1.12905  1.12924  0.0  0.0  0.00018  0.000121  1.12905       0
 28  GBP_CHF 2024-04-22 05:55:00+00:00  1.12881  1.12904  0.0  0.0  0.00020  0.000330  1.12881       0
@@ -49,7 +49,7 @@
 2024-04-22 09:45:02 CandleManager() new candle:last_candle:24-04-22 06:10 is_ready:True
 2024-04-22 09:45:07 tech_manager: max_rows:32 candle_time:2024-04-22 06:10:00+00:00 granularity:M5
 2024-04-22 09:45:07 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 05:50:00+00:00  1.12905  1.12924  0.0  0.0  0.00018  0.000121  1.12905       0
 27  GBP_CHF 2024-04-22 05:55:00+00:00  1.12881  1.12904  0.0  0.0  0.00020  0.000330  1.12881       0
 28  GBP_CHF 2024-04-22 06:00:00+00:00  1.12885  1.12882  0.0  0.0  0.00016  0.000248  1.12885       0
@@ -58,7 +58,7 @@
 2024-04-22 09:50:00 CandleManager() new candle:last_candle:24-04-22 06:15 is_ready:True
 2024-04-22 09:50:05 tech_manager: max_rows:32 candle_time:2024-04-22 06:15:00+00:00 granularity:M5
 2024-04-22 09:50:06 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 05:55:00+00:00  1.12881  1.12904  0.0  0.0  0.00020  0.000330  1.12881       0
 27  GBP_CHF 2024-04-22 06:00:00+00:00  1.12885  1.12882  0.0  0.0  0.00016  0.000248  1.12885       0
 28  GBP_CHF 2024-04-22 06:05:00+00:00  1.12901  1.12884  0.0  0.0  0.00020  0.000073  1.12901       0
@@ -67,7 +67,7 @@
 2024-04-22 09:55:04 CandleManager() new candle:last_candle:24-04-22 06:20 is_ready:True
 2024-04-22 09:55:09 tech_manager: max_rows:32 candle_time:2024-04-22 06:20:00+00:00 granularity:M5
 2024-04-22 09:55:13 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 06:00:00+00:00  1.12885  1.12882  0.0  0.0  0.00016  0.000248  1.12885       0
 27  GBP_CHF 2024-04-22 06:05:00+00:00  1.12901  1.12884  0.0  0.0  0.00020  0.000073  1.12901       0
 28  GBP_CHF 2024-04-22 06:10:00+00:00  1.12887  1.12900  0.0  0.0  0.00020  0.000197  1.12887       0
@@ -76,7 +76,7 @@
 2024-04-22 10:00:18 CandleManager() new candle:last_candle:24-04-22 06:25 is_ready:True
 2024-04-22 10:00:27 tech_manager: max_rows:32 candle_time:2024-04-22 06:25:00+00:00 granularity:M5
 2024-04-22 10:00:27 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 06:05:00+00:00  1.12901  1.12884  0.0  0.0  0.00020  0.000073  1.12901       0
 27  GBP_CHF 2024-04-22 06:10:00+00:00  1.12887  1.12900  0.0  0.0  0.00020  0.000197  1.12887       0
 28  GBP_CHF 2024-04-22 06:15:00+00:00  1.12890  1.12887  0.0  0.0  0.00019  0.000139  1.12890       0
@@ -85,7 +85,7 @@
 2024-04-22 10:05:04 CandleManager() new candle:last_candle:24-04-22 06:30 is_ready:True
 2024-04-22 10:05:09 tech_manager: max_rows:32 candle_time:2024-04-22 06:30:00+00:00 granularity:M5
 2024-04-22 10:05:09 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 06:10:00+00:00  1.12887  1.12900  0.0  0.0  0.00020  0.000197  1.12887       0
 27  GBP_CHF 2024-04-22 06:15:00+00:00  1.12890  1.12887  0.0  0.0  0.00019  0.000139  1.12890       0
 28  GBP_CHF 2024-04-22 06:20:00+00:00  1.12895  1.12892  0.0  0.0  0.00018  0.000071  1.12895       0
@@ -94,7 +94,7 @@
 2024-04-22 10:10:18 CandleManager() new candle:last_candle:24-04-22 06:35 is_ready:True
 2024-04-22 10:10:23 tech_manager: max_rows:32 candle_time:2024-04-22 06:35:00+00:00 granularity:M5
 2024-04-22 10:10:23 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 06:15:00+00:00  1.12890  1.12887  0.0  0.0  0.00019  0.000139  1.12890       0
 27  GBP_CHF 2024-04-22 06:20:00+00:00  1.12895  1.12892  0.0  0.0  0.00018  0.000071  1.12895       0
 28  GBP_CHF 2024-04-22 06:25:00+00:00  1.12881  1.12895  0.0  0.0  0.00016  0.000201  1.12881       0
@@ -103,7 +103,7 @@
 2024-04-22 10:15:14 CandleManager() new candle:last_candle:24-04-22 06:40 is_ready:True
 2024-04-22 10:15:23 tech_manager: max_rows:32 candle_time:2024-04-22 06:40:00+00:00 granularity:M5
 2024-04-22 10:15:23 process_candles:
-       PAIR                      time    mid-c    mid-o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
+       PAIR                      time    mid_c    mid_o   SL   TP   SPREAD      GAIN     LOSS  SIGNAL
 26  GBP_CHF 2024-04-22 06:20:00+00:00  1.12895  1.12892  0.0  0.0  0.00018  0.000071  1.12895       0
 27  GBP_CHF 2024-04-22 06:25:00+00:00  1.12881  1.12895  0.0  0.0  0.00016  0.000201  1.12881       0
 28  GBP_CHF 2024-04-22 06:30:00+00:00  1.12834  1.12882  0.0  0.0  0.00015  0.000609  1.12834       0

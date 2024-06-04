@@ -1,0 +1,2 @@
+2024-06-03 03:11:39 Logwrapper init() ./logs/EUR_USD.log
+2024-06-03 03:11:39 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.06, 'riskreward': 1.5}

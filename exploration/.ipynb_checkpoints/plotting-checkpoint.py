@@ -19,10 +19,10 @@ class CandlePlot:
         if self.candles == True:
             self.fig.add_trace(go.Candlestick(
                 x=self.df_plot.sTime,
-                open= self.df_plot['mid-o'],
-                high= self.df_plot['mid-h'],
-                low= self.df_plot['mid-l'],
-                close= self.df_plot['mid-c'],
+                open= self.df_plot['mid_o'],
+                high= self.df_plot['mid_h'],
+                low= self.df_plot['mid_l'],
+                close= self.df_plot['mid_c'],
                 line=dict(width=1), opacity=1,
                 increasing_fillcolor='#24A06B',
                 decreasing_fillcolor='#CC2E3C',

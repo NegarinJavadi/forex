@@ -9,7 +9,7 @@ import custom_constants.defs as defs
 from bot.candle_manager import CandleManager
 from infrastructure.log_wrapper import LogWrapper
 from models.trade_settings import TradeSettings
-from api.oanda_api import OandaApi
+from openfx_api.openfx_api import OpenFxApi
 from bot.technicals_manager import get_trade_decision
 from bot.trade_manager import place_trade
 
@@ -18,14 +18,14 @@ class Bot:
 
     ERROR_LOG = "error"
     MAIN_LOG = "main"
-    GRANULARITY = "M5"
+    GRANULARITY = "M1"
     SLEEP = 10
 
     def __init__(self):
         self.load_settings()
         self.setup_logs()
 
-        self.api = OandaApi()
+        self.api = OpenFxApi()
         self.candle_manager = CandleManager(self.api, self.trade_settings, self.log_message, Bot.GRANULARITY)
 
         self.log_to_main("Bot started")
@@ -58,6 +58,7 @@ class Bot:
     def process_candles(self, triggered):
         if len(triggered) > 0:
             self.log_message(f"process_candles triggered:{triggered}", Bot.MAIN_LOG)
+            print(f"process_candles triggered:{triggered}")
             for p in triggered:
                 last_time = self.candle_manager.timings[p].last_time
                 trade_decision = get_trade_decision(last_time, p, Bot.GRANULARITY, self.api, 

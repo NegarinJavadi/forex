@@ -5,9 +5,9 @@ import Headlines from '../components/Headlines'
 function Home() {
   return (
      <>
-      <AccountSummary />
-      <Headlines />
-    </>
+         <AccountSummary />
+         <Headlines />
+     </>
   )
 }
 

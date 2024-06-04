@@ -1,16 +1,24 @@
-from models.base_api_price import BaseApiPrice
+import datetime as dt
+import pytz
 
 
-class ApiPrice(BaseApiPrice):
+class ApiPrice():
 
-    def __init__(self, api_ob, homeConversions):
-        super().__init__(api_ob)
+    def __init__(self, api_ob):
+        self.instrument = api_ob['Symbol']
+        self.ask = api_ob['BestBid']['Price']
+        self.bid = api_ob['BestAsk']['Price']
+        self.time = dt.datetime.fromtimestamp(api_ob['Timestamp']/1000, pytz.timezone("UTC")) 
 
-        base_instrument = self.instrument.split('_')[1]
-        for hc in homeConversions:
-            if hc['currency'] == base_instrument:
-                self.sell_conv = float(hc['positionValue'])
-                self.buy_conv = float(hc['positionValue'])
-
+    
     def __repr__(self):
-        return f"ApiPrice() {self.instrument} {self.ask} {self.bid} {self.sell_conv:.6f} {self.buy_conv:.6f}"
+        return f"ApiPrice() {self.instrument} {self.ask} {self.bid} {self.time}"
+
+
+    def get_dict(self):
+        return dict(
+            instrument=self.instrument,
+            time = self.time,
+            ask=self.ask,
+            bid=self.bid
+        )

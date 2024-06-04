@@ -1,0 +1,2594 @@
+[
+    {
+        "pair": "EUR/USD",
+        "last_value": "1.0847",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "8",
+            "sell": "4"
+        },
+        "technical_indicators": {
+            "buy": "9",
+            "sell": "2"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "1.0845",
+                "s2": "1.0846",
+                "s1": "1.0848",
+                "pivot_points": "1.0849",
+                "r1": "1.0850",
+                "r2": "1.0852",
+                "r3": "1.0853"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "1.0846",
+                "s2": "1.0847",
+                "s1": "1.0848",
+                "pivot_points": "1.0849",
+                "r1": "1.0850",
+                "r2": "1.0851",
+                "r3": "1.0852"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "1.0848",
+                "s2": "1.0848",
+                "s1": "1.0848",
+                "pivot_points": "1.0849",
+                "r1": "1.0849",
+                "r2": "1.0849",
+                "r3": "1.0849"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "1.0845",
+                "s2": "1.0846",
+                "s1": "1.0848",
+                "pivot_points": "1.0849",
+                "r1": "1.0850",
+                "r2": "1.0852",
+                "r3": "1.0853"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "1.0847",
+                "pivot_points": "1.0849",
+                "r1": "1.0849",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "60.805",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "69.545",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "33.617",
+                "action": "Sell"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.001",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "66.927",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-24.446",
+                "action": "Buy"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "57.2358",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0010",
+                "action": "High Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0000",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "45.002",
+                "action": "Sell"
+            },
+            {
+                "name": "ROC",
+                "value": "0.314",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0016",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "1.0849\n\n\t\t\t\t\tSell",
+                "exponential": "1.0848\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA10",
+                "simple": "1.0848\n\n\t\t\t\t\tSell",
+                "exponential": "1.0844\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "1.0833\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0839\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "1.0828\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0835\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "1.0841\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0839\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "1.0850\n\n\t\t\t\t\tSell",
+                "exponential": "1.0834\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 1,
+        "time_frame": 3600
+    },
+    {
+        "pair": "EUR/USD",
+        "last_value": "1.0847",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "12",
+            "sell": "0"
+        },
+        "technical_indicators": {
+            "buy": "7",
+            "sell": "2"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "1.0735",
+                "s2": "1.0770",
+                "s1": "1.0792",
+                "pivot_points": "1.0827",
+                "r1": "1.0849",
+                "r2": "1.0884",
+                "r3": "1.0907"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "1.0770",
+                "s2": "1.0791",
+                "s1": "1.0805",
+                "pivot_points": "1.0827",
+                "r1": "1.0849",
+                "r2": "1.0863",
+                "r3": "1.0884"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "1.0797",
+                "s2": "1.0802",
+                "s1": "1.0808",
+                "pivot_points": "1.0827",
+                "r1": "1.0818",
+                "r2": "1.0824",
+                "r3": "1.0829"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "1.0727",
+                "s2": "1.0766",
+                "s1": "1.0784",
+                "pivot_points": "1.0823",
+                "r1": "1.0841",
+                "r2": "1.0880",
+                "r3": "1.0899"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "1.0780",
+                "pivot_points": "1.0821",
+                "r1": "1.0837",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "58.562",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "63.610",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "47.975",
+                "action": "Neutral"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.002",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "33.227",
+                "action": "Sell"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-28.198",
+                "action": "Buy"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "40.2854",
+                "action": "Neutral"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0046",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0007",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "43.717",
+                "action": "Sell"
+            },
+            {
+                "name": "ROC",
+                "value": "0.738",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0024",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "1.0838\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0838\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "1.0841\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0827\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "1.0790\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0804\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "1.0774\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0789\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "1.0812\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0790\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "1.0787\n\n\t\t\t\t\tBuy",
+                "exponential": "1.0798\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 1,
+        "time_frame": 86400
+    },
+    {
+        "pair": "GBP/USD",
+        "last_value": "1.2737",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "10",
+            "sell": "2"
+        },
+        "technical_indicators": {
+            "buy": "11",
+            "sell": "0"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "1.2731",
+                "s2": "1.2733",
+                "s1": "1.2736",
+                "pivot_points": "1.2738",
+                "r1": "1.2741",
+                "r2": "1.2743",
+                "r3": "1.2746"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "1.2733",
+                "s2": "1.2735",
+                "s1": "1.2736",
+                "pivot_points": "1.2738",
+                "r1": "1.2740",
+                "r2": "1.2741",
+                "r3": "1.2743"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "1.2739",
+                "s2": "1.2739",
+                "s1": "1.2740",
+                "pivot_points": "1.2738",
+                "r1": "1.2740",
+                "r2": "1.2741",
+                "r3": "1.2741"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "1.2733",
+                "s2": "1.2734",
+                "s1": "1.2738",
+                "pivot_points": "1.2739",
+                "r1": "1.2743",
+                "r2": "1.2744",
+                "r3": "1.2748"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "1.2737",
+                "pivot_points": "1.2739",
+                "r1": "1.2743",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "61.733",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "73.619",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "61.198",
+                "action": "Buy"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.001",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "45.785",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-24.348",
+                "action": "Buy"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "78.3469",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0012",
+                "action": "High Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0006",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "55.339",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "0.343",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0016",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "1.2738\n\n\t\t\t\t\tSell",
+                "exponential": "1.2738\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA10",
+                "simple": "1.2734\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2731\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "1.2716\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2724\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "1.2715\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2717\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "1.2716\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2709\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "1.2690\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2681\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 2,
+        "time_frame": 3600
+    },
+    {
+        "pair": "GBP/USD",
+        "last_value": "1.2737",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "12",
+            "sell": "0"
+        },
+        "technical_indicators": {
+            "buy": "8",
+            "sell": "0"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "1.2608",
+                "s2": "1.2646",
+                "s1": "1.2672",
+                "pivot_points": "1.2710",
+                "r1": "1.2736",
+                "r2": "1.2774",
+                "r3": "1.2800"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "1.2646",
+                "s2": "1.2670",
+                "s1": "1.2686",
+                "pivot_points": "1.2710",
+                "r1": "1.2734",
+                "r2": "1.2750",
+                "r3": "1.2774"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "1.2679",
+                "s2": "1.2685",
+                "s1": "1.2691",
+                "pivot_points": "1.2710",
+                "r1": "1.2703",
+                "r2": "1.2709",
+                "r3": "1.2715"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "1.2600",
+                "s2": "1.2642",
+                "s1": "1.2664",
+                "pivot_points": "1.2706",
+                "r1": "1.2728",
+                "r2": "1.2770",
+                "r3": "1.2792"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "1.2659",
+                "pivot_points": "1.2703",
+                "r1": "1.2723",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "66.296",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "81.555",
+                "action": "Overbought"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "100.000",
+                "action": "Overbought"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.005",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "44.334",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-8.044",
+                "action": "Overbought"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "85.2134",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0064",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0085",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "54.551",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "1.405",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0128",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "1.2712\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2709\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "1.2676\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2674\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "1.2601\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2626\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "1.2579\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2600\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "1.2632\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2586\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "1.2539\n\n\t\t\t\t\tBuy",
+                "exponential": "1.2553\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 2,
+        "time_frame": 86400
+    },
+    {
+        "pair": "USD/JPY",
+        "last_value": "157.01",
+        "update_time": "2024-05-24 16:58",
+        "summary": "Buy",
+        "moving_averages": {
+            "buy": "11",
+            "sell": "1"
+        },
+        "technical_indicators": {
+            "buy": "4",
+            "sell": "4"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "156.85",
+                "s2": "156.89",
+                "s1": "156.92",
+                "pivot_points": "156.96",
+                "r1": "156.99",
+                "r2": "157.03",
+                "r3": "157.07"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "156.89",
+                "s2": "156.91",
+                "s1": "156.93",
+                "pivot_points": "156.96",
+                "r1": "156.99",
+                "r2": "157.01",
+                "r3": "157.03"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "156.92",
+                "s2": "156.93",
+                "s1": "156.93",
+                "pivot_points": "156.96",
+                "r1": "156.95",
+                "r2": "156.95",
+                "r3": "156.96"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "156.83",
+                "s2": "156.88",
+                "s1": "156.90",
+                "pivot_points": "156.95",
+                "r1": "156.97",
+                "r2": "157.02",
+                "r3": "157.05"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "156.89",
+                "pivot_points": "156.95",
+                "r1": "156.97",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "53.542",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "41.270",
+                "action": "Sell"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "57.355",
+                "action": "Buy"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.020",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "23.535",
+                "action": "Sell"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-41.268",
+                "action": "Buy"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "-35.6040",
+                "action": "Neutral"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.1057",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0000",
+                "action": "Neutral"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "59.204",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "-0.025",
+                "action": "Sell"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "-0.0620",
+                "action": "Sell"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "156.96\n\n\t\t\t\t\tBuy",
+                "exponential": "156.98\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "156.99\n\n\t\t\t\t\tBuy",
+                "exponential": "156.98\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "157.02\n\n\t\t\t\t\tSell",
+                "exponential": "156.98\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "156.91\n\n\t\t\t\t\tBuy",
+                "exponential": "156.87\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "156.61\n\n\t\t\t\t\tBuy",
+                "exponential": "156.61\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "156.08\n\n\t\t\t\t\tBuy",
+                "exponential": "156.19\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 3,
+        "time_frame": 3600
+    },
+    {
+        "pair": "USD/JPY",
+        "last_value": "157.01",
+        "update_time": "2024-05-24 16:58",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "12",
+            "sell": "0"
+        },
+        "technical_indicators": {
+            "buy": "9",
+            "sell": "0"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "155.91",
+                "s2": "156.22",
+                "s1": "156.58",
+                "pivot_points": "156.89",
+                "r1": "157.25",
+                "r2": "157.56",
+                "r3": "157.92"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "156.22",
+                "s2": "156.48",
+                "s1": "156.63",
+                "pivot_points": "156.89",
+                "r1": "157.15",
+                "r2": "157.30",
+                "r3": "157.56"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "156.75",
+                "s2": "156.81",
+                "s1": "156.87",
+                "pivot_points": "156.89",
+                "r1": "156.99",
+                "r2": "157.05",
+                "r3": "157.11"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "155.93",
+                "s2": "156.23",
+                "s1": "156.60",
+                "pivot_points": "156.90",
+                "r1": "157.27",
+                "r2": "157.57",
+                "r3": "157.94"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "156.73",
+                "pivot_points": "156.97",
+                "r1": "157.40",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "61.295",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "79.294",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "100.000",
+                "action": "Overbought"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.870",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "41.607",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-6.232",
+                "action": "Overbought"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "150.8470",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.9168",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.7107",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "69.031",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "1.763",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "1.6910",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "156.61\n\n\t\t\t\t\tBuy",
+                "exponential": "156.60\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "156.16\n\n\t\t\t\t\tBuy",
+                "exponential": "156.20\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "155.62\n\n\t\t\t\t\tBuy",
+                "exponential": "155.64\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "153.93\n\n\t\t\t\t\tBuy",
+                "exponential": "154.04\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "151.17\n\n\t\t\t\t\tBuy",
+                "exponential": "152.16\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "149.29\n\n\t\t\t\t\tBuy",
+                "exponential": "148.78\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 3,
+        "time_frame": 86400
+    },
+    {
+        "pair": "USD/CHF",
+        "last_value": "0.9148",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "11",
+            "sell": "1"
+        },
+        "technical_indicators": {
+            "buy": "3",
+            "sell": "2"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.9143",
+                "s2": "0.9144",
+                "s1": "0.9146",
+                "pivot_points": "0.9147",
+                "r1": "0.9149",
+                "r2": "0.9150",
+                "r3": "0.9152"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.9144",
+                "s2": "0.9145",
+                "s1": "0.9146",
+                "pivot_points": "0.9147",
+                "r1": "0.9148",
+                "r2": "0.9149",
+                "r3": "0.9150"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.9146",
+                "s2": "0.9146",
+                "s1": "0.9147",
+                "pivot_points": "0.9147",
+                "r1": "0.9147",
+                "r2": "0.9148",
+                "r3": "0.9148"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.9143",
+                "s2": "0.9144",
+                "s1": "0.9146",
+                "pivot_points": "0.9147",
+                "r1": "0.9149",
+                "r2": "0.9150",
+                "r3": "0.9152"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.9146",
+                "pivot_points": "0.9147",
+                "r1": "0.9149",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "52.047",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "46.333",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "62.011",
+                "action": "Buy"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.000",
+                "action": "Neutral"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "22.258",
+                "action": "Neutral"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-44.000",
+                "action": "Buy"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "7.4398",
+                "action": "Neutral"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0009",
+                "action": "High Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0000",
+                "action": "Neutral"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "69.007",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "-0.027",
+                "action": "Sell"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "-0.0007",
+                "action": "Sell"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.9146\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9147\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.9147\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9147\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.9148\n\n\t\t\t\t\tSell",
+                "exponential": "0.9147\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.9147\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9143\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.9131\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9129\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.9096\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9111\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 4,
+        "time_frame": 3600
+    },
+    {
+        "pair": "USD/CHF",
+        "last_value": "0.9148",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "12",
+            "sell": "0"
+        },
+        "technical_indicators": {
+            "buy": "8",
+            "sell": "0"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.9094",
+                "s2": "0.9109",
+                "s1": "0.9126",
+                "pivot_points": "0.9142",
+                "r1": "0.9159",
+                "r2": "0.9175",
+                "r3": "0.9191"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.9109",
+                "s2": "0.9122",
+                "s1": "0.9130",
+                "pivot_points": "0.9142",
+                "r1": "0.9154",
+                "r2": "0.9162",
+                "r3": "0.9175"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.9134",
+                "s2": "0.9137",
+                "s1": "0.9140",
+                "pivot_points": "0.9142",
+                "r1": "0.9146",
+                "r2": "0.9149",
+                "r3": "0.9152"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.9094",
+                "s2": "0.9109",
+                "s1": "0.9126",
+                "pivot_points": "0.9142",
+                "r1": "0.9159",
+                "r2": "0.9175",
+                "r3": "0.9191"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.9118",
+                "pivot_points": "0.9138",
+                "r1": "0.9151",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "59.118",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "79.942",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "90.489",
+                "action": "Overbought"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.002",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "25.919",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-7.268",
+                "action": "Overbought"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "169.4226",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0042",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0039",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "70.536",
+                "action": "Overbought"
+            },
+            {
+                "name": "ROC",
+                "value": "0.949",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0073",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.9132\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9128\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.9098\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9114\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.9096\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9101\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.9069\n\n\t\t\t\t\tBuy",
+                "exponential": "0.9039\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.8894\n\n\t\t\t\t\tBuy",
+                "exponential": "0.8974\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.8881\n\n\t\t\t\t\tBuy",
+                "exponential": "0.8939\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 4,
+        "time_frame": 86400
+    },
+    {
+        "pair": "AUD/USD",
+        "last_value": "0.6629",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "7",
+            "sell": "5"
+        },
+        "technical_indicators": {
+            "buy": "11",
+            "sell": "0"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.6620",
+                "s2": "0.6623",
+                "s1": "0.6626",
+                "pivot_points": "0.6629",
+                "r1": "0.6632",
+                "r2": "0.6635",
+                "r3": "0.6638"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.6623",
+                "s2": "0.6625",
+                "s1": "0.6627",
+                "pivot_points": "0.6629",
+                "r1": "0.6631",
+                "r2": "0.6633",
+                "r3": "0.6635"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.6628",
+                "s2": "0.6628",
+                "s1": "0.6629",
+                "pivot_points": "0.6629",
+                "r1": "0.6630",
+                "r2": "0.6631",
+                "r3": "0.6631"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.6620",
+                "s2": "0.6623",
+                "s1": "0.6626",
+                "pivot_points": "0.6629",
+                "r1": "0.6632",
+                "r2": "0.6635",
+                "r3": "0.6638"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.6624",
+                "pivot_points": "0.6628",
+                "r1": "0.6631",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "59.808",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "75.530",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "70.359",
+                "action": "Buy"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.000",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "56.416",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-22.221",
+                "action": "Buy"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "78.3111",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0009",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0003",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "54.090",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "0.447",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0018",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.6630\n\n\t\t\t\t\tSell",
+                "exponential": "0.6628\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.6625\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6624\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.6614\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6621\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.6618\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6624\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.6640\n\n\t\t\t\t\tSell",
+                "exponential": "0.6635\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.6656\n\n\t\t\t\t\tSell",
+                "exponential": "0.6639\n\n\t\t\t\t\tSell"
+            }
+        ],
+        "pair_id": 5,
+        "time_frame": 3600
+    },
+    {
+        "pair": "AUD/USD",
+        "last_value": "0.6629",
+        "update_time": "2024-05-24 16:59",
+        "summary": "N/A",
+        "moving_averages": {
+            "buy": "8",
+            "sell": "4"
+        },
+        "technical_indicators": {
+            "buy": "2",
+            "sell": "3"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.6527",
+                "s2": "0.6562",
+                "s1": "0.6584",
+                "pivot_points": "0.6619",
+                "r1": "0.6641",
+                "r2": "0.6676",
+                "r3": "0.6697"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.6562",
+                "s2": "0.6584",
+                "s1": "0.6597",
+                "pivot_points": "0.6619",
+                "r1": "0.6641",
+                "r2": "0.6654",
+                "r3": "0.6676"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.6590",
+                "s2": "0.6596",
+                "s1": "0.6601",
+                "pivot_points": "0.6619",
+                "r1": "0.6611",
+                "r2": "0.6616",
+                "r3": "0.6622"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.6521",
+                "s2": "0.6559",
+                "s1": "0.6578",
+                "pivot_points": "0.6616",
+                "r1": "0.6635",
+                "r2": "0.6673",
+                "r3": "0.6691"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.6573",
+                "pivot_points": "0.6614",
+                "r1": "0.6630",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "54.285",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "51.146",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "19.456",
+                "action": "Oversold"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.003",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "31.995",
+                "action": "Sell"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-54.777",
+                "action": "Neutral"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "-30.9207",
+                "action": "Neutral"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0053",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0000",
+                "action": "Neutral"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "45.500",
+                "action": "Sell"
+            },
+            {
+                "name": "ROC",
+                "value": "0.068",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "-0.0030",
+                "action": "Sell"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.6637\n\n\t\t\t\t\tSell",
+                "exponential": "0.6634\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.6649\n\n\t\t\t\t\tSell",
+                "exponential": "0.6633\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.6612\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6612\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.6554\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6577\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.6561\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6555\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.6529\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6578\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 5,
+        "time_frame": 86400
+    },
+    {
+        "pair": "EUR/GBP",
+        "last_value": "0.8515",
+        "update_time": "2024-05-24 16:59",
+        "summary": "N/A",
+        "moving_averages": {
+            "buy": "0",
+            "sell": "12"
+        },
+        "technical_indicators": {
+            "buy": "0",
+            "sell": "8"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.8508",
+                "s2": "0.8512",
+                "s1": "0.8513",
+                "pivot_points": "0.8517",
+                "r1": "0.8519",
+                "r2": "0.8522",
+                "r3": "0.8524"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.8512",
+                "s2": "0.8514",
+                "s1": "0.8515",
+                "pivot_points": "0.8517",
+                "r1": "0.8519",
+                "r2": "0.8520",
+                "r3": "0.8522"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.8515",
+                "s2": "0.8515",
+                "s1": "0.8516",
+                "pivot_points": "0.8517",
+                "r1": "0.8516",
+                "r2": "0.8517",
+                "r3": "0.8517"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.8508",
+                "s2": "0.8512",
+                "s1": "0.8513",
+                "pivot_points": "0.8517",
+                "r1": "0.8519",
+                "r2": "0.8522",
+                "r3": "0.8524"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.8513",
+                "pivot_points": "0.8517",
+                "r1": "0.8518",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "46.345",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "25.952",
+                "action": "Sell"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "6.918",
+                "action": "Oversold"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.000",
+                "action": "Neutral"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "34.183",
+                "action": "Sell"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-79.286",
+                "action": "Sell"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "-100.5819",
+                "action": "Sell"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0007",
+                "action": "High Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "-0.0001",
+                "action": "Sell"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "42.482",
+                "action": "Sell"
+            },
+            {
+                "name": "ROC",
+                "value": "-0.034",
+                "action": "Sell"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "-0.0008",
+                "action": "Sell"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.8517\n\n\t\t\t\t\tSell",
+                "exponential": "0.8517\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.8519\n\n\t\t\t\t\tSell",
+                "exponential": "0.8518\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.8519\n\n\t\t\t\t\tSell",
+                "exponential": "0.8519\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.8516\n\n\t\t\t\t\tSell",
+                "exponential": "0.8520\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.8526\n\n\t\t\t\t\tSell",
+                "exponential": "0.8529\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.8551\n\n\t\t\t\t\tSell",
+                "exponential": "0.8543\n\n\t\t\t\t\tSell"
+            }
+        ],
+        "pair_id": 6,
+        "time_frame": 3600
+    },
+    {
+        "pair": "EUR/GBP",
+        "last_value": "0.8515",
+        "update_time": "2024-05-24 16:59",
+        "summary": "N/A",
+        "moving_averages": {
+            "buy": "0",
+            "sell": "12"
+        },
+        "technical_indicators": {
+            "buy": "0",
+            "sell": "8"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.8441",
+                "s2": "0.8467",
+                "s1": "0.8491",
+                "pivot_points": "0.8517",
+                "r1": "0.8541",
+                "r2": "0.8567",
+                "r3": "0.8590"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.8467",
+                "s2": "0.8486",
+                "s1": "0.8498",
+                "pivot_points": "0.8517",
+                "r1": "0.8536",
+                "r2": "0.8548",
+                "r3": "0.8567"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.8500",
+                "s2": "0.8505",
+                "s1": "0.8509",
+                "pivot_points": "0.8517",
+                "r1": "0.8519",
+                "r2": "0.8523",
+                "r3": "0.8528"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.8439",
+                "s2": "0.8466",
+                "s1": "0.8489",
+                "pivot_points": "0.8516",
+                "r1": "0.8539",
+                "r2": "0.8566",
+                "r3": "0.8588"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.8504",
+                "pivot_points": "0.8524",
+                "r1": "0.8554",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "35.905",
+                "action": "Sell"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "28.290",
+                "action": "Sell"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "10.875",
+                "action": "Oversold"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "-0.001",
+                "action": "Sell"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "35.231",
+                "action": "Sell"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-82.332",
+                "action": "Oversold"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "-122.1873",
+                "action": "Sell"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0029",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "-0.0042",
+                "action": "Sell"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "25.268",
+                "action": "Oversold"
+            },
+            {
+                "name": "ROC",
+                "value": "-0.643",
+                "action": "Sell"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "-0.0056",
+                "action": "Sell"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.8523\n\n\t\t\t\t\tSell",
+                "exponential": "0.8527\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.8550\n\n\t\t\t\t\tSell",
+                "exponential": "0.8540\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.8561\n\n\t\t\t\t\tSell",
+                "exponential": "0.8555\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.8563\n\n\t\t\t\t\tSell",
+                "exponential": "0.8560\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.8557\n\n\t\t\t\t\tSell",
+                "exponential": "0.8570\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.8601\n\n\t\t\t\t\tSell",
+                "exponential": "0.8600\n\n\t\t\t\t\tSell"
+            }
+        ],
+        "pair_id": 6,
+        "time_frame": 86400
+    },
+    {
+        "pair": "USD/CAD",
+        "last_value": "1.3665",
+        "update_time": "2024-05-24 16:59",
+        "summary": "N/A",
+        "moving_averages": {
+            "buy": "2",
+            "sell": "10"
+        },
+        "technical_indicators": {
+            "buy": "0",
+            "sell": "9"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "1.3657",
+                "s2": "1.3660",
+                "s1": "1.3663",
+                "pivot_points": "1.3666",
+                "r1": "1.3669",
+                "r2": "1.3672",
+                "r3": "1.3676"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "1.3660",
+                "s2": "1.3662",
+                "s1": "1.3664",
+                "pivot_points": "1.3666",
+                "r1": "1.3668",
+                "r2": "1.3670",
+                "r3": "1.3672"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "1.3664",
+                "s2": "1.3664",
+                "s1": "1.3665",
+                "pivot_points": "1.3666",
+                "r1": "1.3666",
+                "r2": "1.3667",
+                "r3": "1.3667"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "1.3657",
+                "s2": "1.3660",
+                "s1": "1.3663",
+                "pivot_points": "1.3666",
+                "r1": "1.3669",
+                "r2": "1.3672",
+                "r3": "1.3676"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "1.3664",
+                "pivot_points": "1.3666",
+                "r1": "1.3670",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "33.247",
+                "action": "Sell"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "16.397",
+                "action": "Oversold"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "33.038",
+                "action": "Sell"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "-0.001",
+                "action": "Sell"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "49.278",
+                "action": "Sell"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-81.035",
+                "action": "Oversold"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "-76.8151",
+                "action": "Sell"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0013",
+                "action": "High Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "-0.0020",
+                "action": "Sell"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "37.521",
+                "action": "Sell"
+            },
+            {
+                "name": "ROC",
+                "value": "-0.513",
+                "action": "Sell"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "-0.0032",
+                "action": "Sell"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "1.3660\n\n\t\t\t\t\tBuy",
+                "exponential": "1.3666\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA10",
+                "simple": "1.3676\n\n\t\t\t\t\tSell",
+                "exponential": "1.3676\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA20",
+                "simple": "1.3703\n\n\t\t\t\t\tSell",
+                "exponential": "1.3689\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA50",
+                "simple": "1.3700\n\n\t\t\t\t\tSell",
+                "exponential": "1.3691\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA100",
+                "simple": "1.3672\n\n\t\t\t\t\tSell",
+                "exponential": "1.3677\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA200",
+                "simple": "1.3647\n\n\t\t\t\t\tBuy",
+                "exponential": "1.3667\n\n\t\t\t\t\tSell"
+            }
+        ],
+        "pair_id": 7,
+        "time_frame": 3600
+    },
+    {
+        "pair": "USD/CAD",
+        "last_value": "1.3665",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Buy",
+        "moving_averages": {
+            "buy": "7",
+            "sell": "5"
+        },
+        "technical_indicators": {
+            "buy": "4",
+            "sell": "2"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "1.3585",
+                "s2": "1.3621",
+                "s1": "1.3675",
+                "pivot_points": "1.3710",
+                "r1": "1.3764",
+                "r2": "1.3799",
+                "r3": "1.3854"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "1.3621",
+                "s2": "1.3655",
+                "s1": "1.3676",
+                "pivot_points": "1.3710",
+                "r1": "1.3744",
+                "r2": "1.3765",
+                "r3": "1.3799"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "1.3704",
+                "s2": "1.3713",
+                "s1": "1.3721",
+                "pivot_points": "1.3710",
+                "r1": "1.3737",
+                "r2": "1.3745",
+                "r3": "1.3754"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "1.3595",
+                "s2": "1.3626",
+                "s1": "1.3685",
+                "pivot_points": "1.3715",
+                "r1": "1.3774",
+                "r2": "1.3804",
+                "r3": "1.3864"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "1.3692",
+                "pivot_points": "1.3719",
+                "r1": "1.3782",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "50.024",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "45.913",
+                "action": "Neutral"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "48.976",
+                "action": "Neutral"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.001",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "32.778",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-56.857",
+                "action": "Sell"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "41.5848",
+                "action": "Neutral"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0063",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0000",
+                "action": "Neutral"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "52.272",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "-0.048",
+                "action": "Sell"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0047",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "1.3672\n\n\t\t\t\t\tSell",
+                "exponential": "1.3673\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA10",
+                "simple": "1.3650\n\n\t\t\t\t\tBuy",
+                "exponential": "1.3669\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA20",
+                "simple": "1.3675\n\n\t\t\t\t\tSell",
+                "exponential": "1.3668\n\n\t\t\t\t\tSell"
+            },
+            {
+                "period": "MA50",
+                "simple": "1.3647\n\n\t\t\t\t\tBuy",
+                "exponential": "1.3639\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "1.3563\n\n\t\t\t\t\tBuy",
+                "exponential": "1.3608\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "1.3571\n\n\t\t\t\t\tBuy",
+                "exponential": "1.3563\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 7,
+        "time_frame": 86400
+    },
+    {
+        "pair": "NZD/USD",
+        "last_value": "0.6121",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "11",
+            "sell": "1"
+        },
+        "technical_indicators": {
+            "buy": "10",
+            "sell": "0"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.6116",
+                "s2": "0.6117",
+                "s1": "0.6121",
+                "pivot_points": "0.6122",
+                "r1": "0.6125",
+                "r2": "0.6127",
+                "r3": "0.6130"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.6117",
+                "s2": "0.6119",
+                "s1": "0.6120",
+                "pivot_points": "0.6122",
+                "r1": "0.6124",
+                "r2": "0.6125",
+                "r3": "0.6127"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.6122",
+                "s2": "0.6123",
+                "s1": "0.6123",
+                "pivot_points": "0.6122",
+                "r1": "0.6124",
+                "r2": "0.6124",
+                "r3": "0.6125"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.6116",
+                "s2": "0.6117",
+                "s1": "0.6121",
+                "pivot_points": "0.6122",
+                "r1": "0.6125",
+                "r2": "0.6127",
+                "r3": "0.6130"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.6121",
+                "pivot_points": "0.6122",
+                "r1": "0.6126",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "61.046",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "78.693",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "58.073",
+                "action": "Buy"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.001",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "45.293",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-17.142",
+                "action": "Overbought"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "99.8280",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0008",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0003",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "53.234",
+                "action": "Buy"
+            },
+            {
+                "name": "ROC",
+                "value": "0.468",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0006",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.6122\n\n\t\t\t\t\tSell",
+                "exponential": "0.6121\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.6118\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6117\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.6109\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6114\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.6108\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6109\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.6107\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6108\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.6105\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6094\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 8,
+        "time_frame": 3600
+    },
+    {
+        "pair": "NZD/USD",
+        "last_value": "0.6121",
+        "update_time": "2024-05-24 16:59",
+        "summary": "Strong Buy",
+        "moving_averages": {
+            "buy": "12",
+            "sell": "0"
+        },
+        "technical_indicators": {
+            "buy": "9",
+            "sell": "1"
+        },
+        "pivot_points": [
+            {
+                "name": "Classic",
+                "s3": "0.6036",
+                "s2": "0.6063",
+                "s1": "0.6080",
+                "pivot_points": "0.6107",
+                "r1": "0.6123",
+                "r2": "0.6151",
+                "r3": "0.6167"
+            },
+            {
+                "name": "Fibonacci",
+                "s3": "0.6063",
+                "s2": "0.6080",
+                "s1": "0.6090",
+                "pivot_points": "0.6107",
+                "r1": "0.6124",
+                "r2": "0.6134",
+                "r3": "0.6151"
+            },
+            {
+                "name": "Camarilla",
+                "s3": "0.6085",
+                "s2": "0.6089",
+                "s1": "0.6093",
+                "pivot_points": "0.6107",
+                "r1": "0.6101",
+                "r2": "0.6105",
+                "r3": "0.6109"
+            },
+            {
+                "name": "Woodie's",
+                "s3": "0.6032",
+                "s2": "0.6061",
+                "s1": "0.6076",
+                "pivot_points": "0.6105",
+                "r1": "0.6119",
+                "r2": "0.6149",
+                "r3": "0.6163"
+            },
+            {
+                "name": "DeMark's",
+                "s3": "-",
+                "s2": "-",
+                "s1": "0.6094",
+                "pivot_points": "0.6114",
+                "r1": "0.6138",
+                "r2": "-",
+                "r3": "-"
+            }
+        ],
+        "technical_indicators_details": [
+            {
+                "name": "RSI(14)",
+                "value": "63.843",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCH(9,6)",
+                "value": "71.428",
+                "action": "Buy"
+            },
+            {
+                "name": "STOCHRSI(14)",
+                "value": "73.723",
+                "action": "Buy"
+            },
+            {
+                "name": "MACD(12,26)",
+                "value": "0.003",
+                "action": "Buy"
+            },
+            {
+                "name": "ADX(14)",
+                "value": "43.820",
+                "action": "Buy"
+            },
+            {
+                "name": "Williams %R",
+                "value": "-18.605",
+                "action": "Overbought"
+            },
+            {
+                "name": "CCI(14)",
+                "value": "70.5365",
+                "action": "Buy"
+            },
+            {
+                "name": "ATR(14)",
+                "value": "0.0045",
+                "action": "Less Volatility"
+            },
+            {
+                "name": "Highs/Lows(14)",
+                "value": "0.0031",
+                "action": "Buy"
+            },
+            {
+                "name": "Ultimate Oscillator",
+                "value": "45.669",
+                "action": "Sell"
+            },
+            {
+                "name": "ROC",
+                "value": "1.881",
+                "action": "Buy"
+            },
+            {
+                "name": "Bull/Bear Power(13)",
+                "value": "0.0074",
+                "action": "Buy"
+            }
+        ],
+        "moving_averages_details": [
+            {
+                "period": "MA5",
+                "simple": "0.6102\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6105\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA10",
+                "simple": "0.6093\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6085\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA20",
+                "simple": "0.6037\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6054\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA50",
+                "simple": "0.6001\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6035\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA100",
+                "simple": "0.6068\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6039\n\n\t\t\t\t\tBuy"
+            },
+            {
+                "period": "MA200",
+                "simple": "0.6042\n\n\t\t\t\t\tBuy",
+                "exponential": "0.6077\n\n\t\t\t\t\tBuy"
+            }
+        ],
+        "pair_id": 8,
+        "time_frame": 86400
+    }
+]

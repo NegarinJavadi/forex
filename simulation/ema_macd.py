@@ -14,9 +14,9 @@ SELL = -1
 NONE = 0
 
 def apply_signal(row):
-    if row.direction == BUY and row['mid-l'] > row.EMA:
+    if row.direction == BUY and row['mid_l'] > row.EMA:
         return BUY
-    if row.direction == SELL and row['mid-h'] < row.EMA:
+    if row.direction == SELL and row['mid_h'] < row.EMA:
         return SELL
     return NONE   
 
@@ -33,15 +33,15 @@ def prepare_data(df: pd.DataFrame, slow, fast, signal, ema):
     df_an['macd_delta'] = df_an.MACD - df_an.SIGNAL
     df_an['macd_delta_prev'] = df_an.macd_delta.shift(1)
     df_an['direction'] = df_an.apply(apply_cross, axis=1)
-    df_an['EMA'] = df_an['mid-c'].ewm(span=ema, min_periods=ema).mean()
+    df_an['EMA'] = df_an['mid_c'].ewm(span=ema, min_periods=ema).mean()
     df_an.dropna(inplace=True)
     df_an.reset_index(drop=True, inplace=True)
     return df_an
 
 def load_data(pair, time_d=1):
 
-    start = parser.parse("2021-10-01T00:00:00Z")
-    end = parser.parse("2022-01-01T00:00:00Z")
+    start = parser.parse("2021-10-01T00:00:00")
+    end = parser.parse("2024-05-03T00:00:00")
 
     df = pd.read_pickle(f"./data/{pair}_H{time_d}.pkl")
     #print(df)
@@ -80,7 +80,7 @@ def simulate_params(pair, df, df_m5,  slow, fast, signal, ema, time_d):
 
 def run_pair(pair):
 
-    time_d = 4
+    time_d = 1
 
     df, df_m5 = load_data(pair, time_d=time_d)
 
@@ -114,10 +114,10 @@ def run_pair(pair):
 
 def run_ema_macd(ic: InstrumentCollection):
     results = []
-    our_curr = ['USD', 'GBP', 'JPY', 'EUR']
+    our_curr = ['USD', 'GBP', 'EUR']
     for p1 in our_curr:
         for p2 in our_curr:
-            pair = f"{p1}_{p2}"
+            pair = f"{p1}{p2}"
             if pair in ic.instruments_dict.keys():
                 results = run_pair(pair)
                 results.to_pickle(f"./exploration/macd_ema/macd_ema_res_{pair}.pkl")

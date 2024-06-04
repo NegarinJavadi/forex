@@ -1,14 +1,18 @@
-from dateutil import parser
-
 class OpenTrade:
 
     def __init__(self, api_ob):
-        self.id = api_ob['id']
-        self.instrument = api_ob['instrument']
-        self.price = float(api_ob['price'])
-        self.currentUnits = float(api_ob['currentUnits'])
-        self.unrealizedPL = float(api_ob['unrealizedPL'])
-        self.marginUsed = float(api_ob['marginUsed'])
+        self.id = api_ob['Id']
+        self.instrument = api_ob['Symbol']
+        self.price = api_ob['Price']
+        self.initialAmount = api_ob['InitialAmount']
+        self.unrealizedPL = api_ob['Profit']
+        self.marginUsed = api_ob['Margin']
+        self.stop_loss = 0.0000
+        self.take_profit = 0.0000
+        if "StopLoss" in api_ob:
+            self.stop_loss = api_ob['StopLoss']
+        if "TakeProfit" in api_ob:
+            self.stop_loss = api_ob['TakeProfit']
 
     def __repr__(self):
         return str(vars(self))

@@ -150,7 +150,7 @@ class OandaApi:
         if df.shape[0] == 0:
             return None
         
-        cols = ['time', 'mid-o', 'mid-h', 'mid-l', 'mid-c']
+        cols = ['time', 'mid_o', 'mid_h', 'mid_l', 'mid_c']
         df = df[cols].copy()
 
         df['time'] = df.time.dt.strftime("%y-%m-%d %H:%M")

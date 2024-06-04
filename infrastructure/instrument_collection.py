@@ -1,11 +1,9 @@
 import os
 import sys
-
-import requests
-
 main_dir = os.path.join(os.path.dirname(__file__), '..')
 sys.path.insert(0, main_dir)
 
+import requests
 from db.db import DataDB
 import json
 from models.instruments import Instrument
@@ -14,8 +12,7 @@ from api import oanda_api
 
 class InstrumentCollection:
     FILENAME = "instruments.json"
-    API_KEYS = ['name', 'type', 'displayName', 'pipLocation',
-         'displayPrecision', 'tradeUnitsPrecision', 'marginRate']
+    API_KEYS = ['Symbol', 'Precision', 'TradeAmountStep']
     
 
     def __init__(self):
@@ -47,7 +44,7 @@ class InstrumentCollection:
         
         instruments_dict = {}
         for i in data:
-            key = i['name']
+            key = i['Symbol']
             if key is not None:
                 instruments_dict[key] = { k: i[k] for k in self.API_KEYS}
 
@@ -62,7 +59,7 @@ class InstrumentCollection:
         
         instruments_dict = {}
         for i in data:
-            key = i['name']
+            key = i['Symbol']
             instruments_dict[key] = { k: i[k] for k in self.API_KEYS }
 
         database = DataDB()

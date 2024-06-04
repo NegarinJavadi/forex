@@ -50,14 +50,14 @@ def is_trade(row):
 def load_price_data(pair, granularity, ma_list):
     df = pd.read_pickle(f"./data/{pair}_{granularity}.pkl")
     for ma in ma_list:
-        df[get_ma_col(ma)] = df['mid-c'].rolling(window=ma).mean()
+        df[get_ma_col(ma)] = df['mid_c'].rolling(window=ma).mean()
     df.dropna(inplace=True)
     df.reset_index(drop=True, inplace=True)
     return df
 
 def get_trades(df_analysis, instrument, granularity):
     df_trades = df_analysis[df_analysis.TRADE != NONE].copy()
-    df_trades["DIFF"] = df_trades['mid-c'].diff().shift(-1)
+    df_trades["DIFF"] = df_trades['mid_c'].diff().shift(-1)
     df_trades.fillna(0, inplace=True)
     df_trades["GAIN"] = df_trades.DIFF / instrument.pipLocation
     df_trades["GAIN"] = df_trades["GAIN"] * df_trades["TRADE"]
@@ -146,7 +146,7 @@ def analyse_pair(instrument, granularity, ma_long, ma_short, filepath):
     
 
 
-def run_ma_sim(curr_list=["CAD", "JPY", "GBP", "NZD"],
+def run_ma_sim(curr_list=["USD", "GBP", "EUR"],
                 granularity=["H1"],
                 ma_long=[20,40],
                 ma_short=[10],
@@ -155,10 +155,10 @@ def run_ma_sim(curr_list=["CAD", "JPY", "GBP", "NZD"],
     for g in granularity:
         for p1 in curr_list:
             for p2 in curr_list:
-                pair = f"{p1}_{p2}"
+                pair = f"{p1}{p2}"
                 if pair in ic.instruments_dict.keys():
                     analyse_pair(ic.instruments_dict[pair], g, ma_long, ma_short, filepath)
-        create_ma_res(g)
+        #create_ma_res(g)
         
 
 
