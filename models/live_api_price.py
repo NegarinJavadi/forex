@@ -1,3 +1,8 @@
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
+import sys
+sys.path.insert(0,main_dir)
+
 from dateutil import parser
 from models.base_api_price import BaseApiPrice
 

@@ -1,4 +1,9 @@
 #from sys import float_repr_style
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
+import sys
+sys.path.insert(0,main_dir)
+
 import pandas as pd
 import os
 

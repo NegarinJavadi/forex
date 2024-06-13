@@ -134,7 +134,7 @@ class OandaApi:
             for p in prices:
                 if p in candle:
                     for o in ohlc:
-                        new_dict[f"{p}-{o}"] = float(candle[p][o])
+                        new_dict[f"{p}_{o}"] = float(candle[p][o])
             final_data.append(new_dict)
         df = pd.DataFrame.from_dict(final_data)
         return df

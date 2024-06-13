@@ -41,8 +41,8 @@ def prepare_data(df: pd.DataFrame, slow, fast, signal, ema):
 
 def load_data(pair, time_d=1):
 
-    start = parser.parse("2021-10-01T00:00:00")
-    end = parser.parse("2024-05-03T00:00:00")
+    start = parser.parse("2021-10-01T00:00:00Z")
+    end = parser.parse("2024-05-03T00:00:00Z")
 
     df = pd.read_pickle(f"./data/{pair}_H{time_d}.pkl")
     #print(df)
@@ -115,10 +115,10 @@ def run_pair(pair):
 
 def run_ema_macd(ic: InstrumentCollection):
     results = []
-    our_curr = ['USD', 'GBP', 'EUR']
+    our_curr = ['USD', 'GBP', 'AUD', 'JPY', 'NZD']
     for p1 in our_curr:
         for p2 in our_curr:
-            pair = f"{p1}{p2}"
+            pair = f"{p1}_{p2}"
             if pair in ic.instruments_dict.keys():
                 results = run_pair(pair)
                 results.to_pickle(f"./exploration/macd_ema/macd_ema_res_{pair}.pkl")

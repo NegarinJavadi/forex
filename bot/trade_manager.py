@@ -8,7 +8,7 @@ from bot.trade_risk_calculator import get_trade_size
 from models.trade_decision import TradeDecision
 
 
-def trade_is_open(pair, api:OpenFxApi):
+def trade_is_open(pair, api:OandaApi):
 
     open_trades = api.get_open_trades()
 

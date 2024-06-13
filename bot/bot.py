@@ -18,7 +18,7 @@ class Bot:
 
     ERROR_LOG = "error"
     MAIN_LOG = "main"
-    GRANULARITY = "M1"
+    GRANULARITY = "H1"
     SLEEP = 10
 
     def __init__(self):
@@ -58,7 +58,6 @@ class Bot:
     def process_candles(self, triggered):
         if len(triggered) > 0:
             self.log_message(f"process_candles triggered:{triggered}", Bot.MAIN_LOG)
-            print(f"process_candles triggered:{triggered}")
             for p in triggered:
                 last_time = self.candle_manager.timings[p].last_time
                 trade_decision = get_trade_decision(last_time, p, Bot.GRANULARITY, self.api, 

@@ -1,14 +1,15 @@
 class Instrument:
 
-    def __init__(self, Symbol, Precision, TradeAmountStep):
-        self.name = Symbol
-        self.ins_type = "CURRENCY"
-        self.displayName = Symbol
-        self.pipLocation = pow(10, (Precision-1) * -1)
-        self.tradeUnitsPrecision = Precision
-        self.marginRate = 0.02
-        self.displayPrecision = Precision
-        self.TradeAmountStep = int(TradeAmountStep)
+    def __init__(self,name, ins_type, displayName, 
+                 pipLocation, tradeUnitsPrecision, marginRate,
+                 displayPrecision):
+        self.name = name
+        self.ins_type = ins_type
+        self.displayName = displayName
+        self.pipLocation = pow(10, pipLocation)
+        self.tradeUnitsPrecision = tradeUnitsPrecision
+        self.marginRate = float(marginRate)
+        self.displayPrecision = displayPrecision
 
 
 
@@ -19,8 +20,12 @@ class Instrument:
     @classmethod
     def FromApiObject(cls, ob):
        return Instrument(
-          ob.get('Symbol'),
-          ob.get('Precision'),
-          ob.get('TradeAmountStep')
+          ob.get('name'),
+          ob.get('type'),
+          ob.get('displayName'),
+          ob.get('pipLocation'),
+          ob.get('tradeUnitsPrecision'),
+          ob.get('marginRate'),
+          ob.get('diaplayPrecision')
          )
 

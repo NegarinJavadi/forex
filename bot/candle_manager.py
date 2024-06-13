@@ -23,7 +23,6 @@ class CandleManager:
 
         for pair in self.pairs_list:
             current = self.api.last_complete_candle(pair, self.granularity)
-            print(f"CandleManager {pair} current:{current} last:{self.timings[pair].last_time}")
             if current is None:
                 self.log_message("Unable to get candle", pair)
                 continue
@@ -32,6 +31,5 @@ class CandleManager:
                 self.timings[pair].is_ready = True
                 self.timings[pair].last_time = current
                 self.log_message(f"CandleManager() new candle:{self.timings[pair]}", pair)
-                print(f"CandleManager() new candle:{self.timings[pair]}", pair)
                 triggered.append(pair)
         return triggered

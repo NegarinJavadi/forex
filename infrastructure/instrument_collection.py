@@ -12,7 +12,8 @@ from api import oanda_api
 
 class InstrumentCollection:
     FILENAME = "instruments.json"
-    API_KEYS = ['Symbol', 'Precision', 'TradeAmountStep']
+    API_KEYS = ['name', 'type', 'displayName', 'pipLocation',
+                'displayPrecision', 'tradeUnitsPrecision', 'marginRate']
     
 
     def __init__(self):
@@ -44,7 +45,7 @@ class InstrumentCollection:
         
         instruments_dict = {}
         for i in data:
-            key = i['Symbol']
+            key = i['name']
             if key is not None:
                 instruments_dict[key] = { k: i[k] for k in self.API_KEYS}
 
@@ -59,7 +60,7 @@ class InstrumentCollection:
         
         instruments_dict = {}
         for i in data:
-            key = i['Symbol']
+            key = i['name']
             instruments_dict[key] = { k: i[k] for k in self.API_KEYS }
 
         database = DataDB()
