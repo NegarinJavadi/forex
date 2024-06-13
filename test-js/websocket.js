@@ -1,29 +1,27 @@
-const WebSocket = require('ws');
+const io = require('socket.io-client');
 
-const socket = new WebSocket('wss://marginalttdemowebapi.fxopen.net:3000');
+const socket = io('wss://marginalttdemowebapi.fxopen.net:3000');
 
-socket.onopen = () => {
+
+socket.on('connect', () => {
     console.log('WebSocket connection opened');
     // Send authentication message
-    socket.send(JSON.stringify({
-        type: 'authenticate',
+    socket.emit('authenticate', {
         id: 'd8312554-8085-43f5-aadd-884a035a80e0',
         key: 'TdF4W5RXMHhqeF9B',
         secret: 'x7jfDAwkjenFYmXWnZeFj8anmrzsYbse2P9KPGdEz4WyXN5xd2r5msRy775macyg'
-    }));
-};
+    });
+});
 
-socket.onmessage = (event) => {
-    console.log('Message received:', event.data);
-};
+socket.on('message', (data) => {
+    console.log('Message received:', data);
+});
 
-socket.onerror = (error) => {
+socket.on('error', (error) => {
     console.error('WebSocket error:', error.message);
     console.error('Error details:', error);
-};
+});
 
-socket.onclose = (event) => {
-    console.log('WebSocket connection closed:', event);
-    console.log('Close event code:', event.code);
-    console.log('Close event reason:', event.reason);
-};
+socket.on('disconnect', (reason) => {
+    console.log('WebSocket connection closed:', reason);
+});

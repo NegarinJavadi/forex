@@ -3,13 +3,13 @@ main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.insert(0,main_dir)
 
-from openfx_api.openfx_api import OpenFxApi
+from api.oanda_api import OandaApi
 from infrastructure.instrument_collection import instrumentCollection as ic
 
 BASE = 10000
 MINUMUM = 1000
 
-def get_trade_size(api: OpenFxApi, pair, loss, trade_risk, log_message):
+def get_trade_size(api: OandaApi, pair, loss, trade_risk, log_message):
 
     pip_values = api.get_pip_value([pair])    
 

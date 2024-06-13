@@ -9,7 +9,7 @@ import custom_constants.defs as defs
 from bot.candle_manager import CandleManager
 from infrastructure.log_wrapper import LogWrapper
 from models.trade_settings import TradeSettings
-from openfx_api.openfx_api import OpenFxApi
+from api.oanda_api import OandaApi
 from bot.technicals_manager import get_trade_decision
 from bot.trade_manager import place_trade
 
@@ -25,7 +25,7 @@ class Bot:
         self.load_settings()
         self.setup_logs()
 
-        self.api = OpenFxApi()
+        self.api = OandaApi()
         self.candle_manager = CandleManager(self.api, self.trade_settings, self.log_message, Bot.GRANULARITY)
 
         self.log_to_main("Bot started")

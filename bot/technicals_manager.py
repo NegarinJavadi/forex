@@ -8,7 +8,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('expand_frame_repr', False)
 
 from technicals.indicators import BollingerBands
-from openfx_api.openfx_api import OpenFxApi
+from api.oanda_api import OandaApi
 from models.trade_settings import TradeSettings
 from models.trade_decision import TradeDecision
 import custom_constants.defs as defs
@@ -59,7 +59,7 @@ def process_candles(df: pd.DataFrame, pair, trade_settings:TradeSettings, log_me
 
 
 def fetch_candles(pair, row_count, candle_time, granularity,
-                    api: OpenFxApi, log_message):
+                    api: OandaApi, log_message):
 
     df = api.get_candles_df(pair, count=row_count, granularity=granularity)
 
@@ -73,7 +73,7 @@ def fetch_candles(pair, row_count, candle_time, granularity,
 
     return df
 
-def get_trade_decision(candle_time, pair, granularity, api: OpenFxApi, 
+def get_trade_decision(candle_time, pair, granularity, api: OandaApi, 
                             trade_settings: TradeSettings, log_message):
 
 

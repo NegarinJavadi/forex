@@ -8,8 +8,7 @@ import datetime as dt
 import time
 from dateutil import parser
 from infrastructure.instrument_collection import InstrumentCollection
-from openfx_api.openfx_api import OpenFxApi
-
+from api.oanda_api import OandaApi
 
 CANDLE_COUNT = 900
 
@@ -34,7 +33,7 @@ def save_file(final_df: pd.DataFrame, file_prefix, granularity, pair):
     print(f"*** {s1} --> {final_df.shape[0]} candles ***")
 
 
-def fetch_candles(pair, granularity, date_f: dt.datetime, api: OpenFxApi):
+def fetch_candles(pair, granularity, date_f: dt.datetime, api: OandaApi):
 
     attempts = 0
 
@@ -58,7 +57,7 @@ def fetch_candles(pair, granularity, date_f: dt.datetime, api: OpenFxApi):
         return None
 
 
-def collect_data(pair, granularity, date_f, date_t, file_prefix, api: OpenFxApi):
+def collect_data(pair, granularity, date_f, date_t, file_prefix, api: OandaApi):
     
     time_step = INCREMENTS[granularity]
 
@@ -101,7 +100,7 @@ def collect_data(pair, granularity, date_f, date_t, file_prefix, api: OpenFxApi)
         print(f"{pair} {granularity} --> NO DATA SAVED!")
 
 
-def run_collection(ic: InstrumentCollection, api: OpenFxApi):
+def run_collection(ic: InstrumentCollection, api: OandaApi):
     our_curr = [ "USD", "EUR", "GBP"]
     for p1 in our_curr:
         for p2 in our_curr:

@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from openfx_api.openfx_api import OpenFxApi
+
+from api.oanda_api import OandaApi
 from api.web_options import get_options
 import http
 from scraping.bloomberg_com import bloomberg_com
@@ -25,7 +26,7 @@ def headlines():
 
 @app.route("/api/account")
 def account():
-    return get_response(OpenFxApi().get_account_summary())
+    return get_response(OandaApi().get_account_summary())
 
 @app.route("/api/options")
 def options():
@@ -38,7 +39,7 @@ def technicals(pair, tf):
     
 @app.route("/api/prices/<pair>/<granularity>/<count>")
 def prices(pair, granularity, count):
-    return get_response(OpenFxApi().web_api_candles(pair, granularity, count))
+    return get_response(OandaApi().web_api_candles(pair, granularity, count))
 
 
 if __name__ == "__main__":

@@ -3,12 +3,12 @@ main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.insert(0,main_dir)
 
-from openfx_api.openfx_api import OpenFxApi
+from api.oanda_api import OandaApi
 from models.candle_timing import CandleTiming
 
 class CandleManager:
 
-    def __init__(self, api: OpenFxApi, trade_settings, log_message, granularity):
+    def __init__(self, api: OandaApi, trade_settings, log_message, granularity):
         self.api = api
         self.trade_settings = trade_settings
         self.log_message = log_message

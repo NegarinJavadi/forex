@@ -1,10 +1,10 @@
-from multiprocessing import Process
-
-import pandas as pd
 import os
 main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.insert(0,main_dir)
+
+import pandas as pd
+from multiprocessing import Process
 from dateutil import parser
 import plotly.graph_objects as go
 from technicals.indicators import MACD

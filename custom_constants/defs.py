@@ -1,14 +1,13 @@
-OPENFX_URL = "https://marginalttdemowebapi.fxopen.net:8443/api/v2"
+API_KEY = "39c92c26d426cd80aea158e639fe42eb-732f53d33748678f48d4ae448fe6d286" 
+ACCOUNT_ID = "101-004-27643856-001" 
+OANDA_URL = "https://api-fxpractice.oanda.com/v3/" 
 
-API_ID = "ec6a4c53-41e7-4353-99c4-5e127d75919a"
-API_KEY = "Gt8ztfS2fRSrKQ8H"
-API_SECRET = "ZCwDW25j33FncHG45sz2gqjws8c7d8c357c3rWP4p5b55y6XpafNXfwHsajYX7e4"
 
-SECURE_HEADER = {
-    "Authorization": f"Basic {API_ID}:{API_KEY}:{API_SECRET}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-}
+SECURE_HEADER = { 
+
+    "Authorization": f"Bearer {API_KEY}", 
+    "Content-Type":"application/json" 
+   }
 
 SELL = -1
 BUY = 1

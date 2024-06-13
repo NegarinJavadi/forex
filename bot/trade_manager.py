@@ -3,7 +3,7 @@ main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.insert(0,main_dir)
 
-from openfx_api.openfx_api import OpenFxApi
+from api.oanda_api import OandaApi
 from bot.trade_risk_calculator import get_trade_size
 from models.trade_decision import TradeDecision
 
@@ -18,7 +18,7 @@ def trade_is_open(pair, api:OpenFxApi):
     
     return None
 
-def place_trade(trade_decision: TradeDecision, api: OpenFxApi, log_message, log_error, trade_risk):
+def place_trade(trade_decision: TradeDecision, api: OandaApi, log_message, log_error, trade_risk):
 
     ot = trade_is_open(trade_decision.pair, api)
 
