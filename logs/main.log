@@ -1,12 +1,4 @@
-2024-06-03 04:47:55 Logwrapper init() ./logs/main.log
-2024-06-03 04:47:55 Bot started with Trade Settings:
+2024-06-18 09:35:04 Logwrapper init() ./logs/main.log
+2024-06-18 09:35:04 Bot started with Trade Settings:
 {'n_ma': 12, 'n_std': 2.0, 'maxspread': 0.04, 'mingain': 0.06, 'riskreward': 1.5}
 
-2024-06-03 04:47:57 Bot started
-2024-06-03 04:48:08 process_candles triggered:['GBPJPY']
-2024-06-03 04:49:06 process_candles triggered:['GBPJPY']
-2024-06-03 04:50:03 process_candles triggered:['GBPJPY']
-2024-06-03 04:50:04 Place Trade: TradeDecision(): GBPJPY dir:1 gain:0.1094 sl:200.1621 tp:200.3444
-2024-06-03 04:51:01 process_candles triggered:['GBPJPY']
-2024-06-03 04:51:02 Place Trade: TradeDecision(): GBPJPY dir:1 gain:0.1284 sl:200.1159 tp:200.3299
-2024-06-03 04:52:10 process_candles triggered:['GBPJPY']

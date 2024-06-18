@@ -16,9 +16,9 @@ SELL = -1
 NONE = 0
 
 def apply_signal(row):
-    if row.direction == BUY and row['mid_l'] > row.EMA:
+    if row.direction == BUY and row.mid_l > row.EMA:
         return BUY
-    if row.direction == SELL and row['mid_h'] < row.EMA:
+    if row.direction == SELL and row.mid_h < row.EMA:
         return SELL
     return NONE   
 
@@ -35,7 +35,7 @@ def prepare_data(df: pd.DataFrame, slow, fast, signal, ema):
     df_an['macd_delta'] = df_an.MACD - df_an.SIGNAL
     df_an['macd_delta_prev'] = df_an.macd_delta.shift(1)
     df_an['direction'] = df_an.apply(apply_cross, axis=1)
-    df_an['EMA'] = df_an['mid_c'].ewm(span=ema, min_periods=ema).mean()
+    df_an['EMA'] = df_an.mid_c.ewm(span=ema, min_periods=ema).mean()
     df_an.dropna(inplace=True)
     df_an.reset_index(drop=True, inplace=True)
     return df_an
@@ -131,7 +131,7 @@ def get_sim_pairs(l_curr, ic: InstrumentCollection):
 
 def run_ema_macd(ic: InstrumentCollection):
 
-    pairs = get_sim_pairs(['USD', 'GBP', 'JPY', 'AUD', 'CAD'], ic)
+    pairs = get_sim_pairs(['USD', 'GBP', 'JPY', 'AUD', 'CAD', 'NZD'], ic)
     
     limit = 4
     current = 0

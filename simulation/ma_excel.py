@@ -4,6 +4,7 @@ main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.insert(0,main_dir)
 
+import xlsxwriter
 import pandas as pd
 import os
 
@@ -47,7 +48,11 @@ def add_pair_charts(df_ma_res, df_ma_trades, writer):
     for _, row in df_temp.iterrows():
         dft = df_ma_trades[(df_ma_trades.cross == row.cross)&
                            (df_ma_trades.pair == row.pair)]
-        dft[cols].to_excel(writer, sheet_name=row.pair, index=False, startrow=0, startcol=11)
+        dft[cols].to_excel(writer, 
+                           sheet_name=row.pair, 
+                           index=False, 
+                           startrow=0, 
+                           startcol=11)
         set_widths(row.pair, writer)
         add_chart(row.pair, row.cross, dft, writer)
 

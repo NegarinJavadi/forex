@@ -1,3 +1,5 @@
+from dateutil import parser
+
 class OpenTrade:
 
     def __init__(self, api_ob):

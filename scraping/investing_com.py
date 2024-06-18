@@ -10,7 +10,7 @@ import logging
 from datetime import datetime
 from dateutil import parser
 from tabulate import tabulate
-from custom_constants import defs
+from constants import defs
 
 # Configure logging to file and stdout
 logging.basicConfig(level=logging.INFO,

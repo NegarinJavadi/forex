@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0,main_dir)
 
 from pymongo import MongoClient, errors
-from custom_constants.defs import MONGO_CONN_STR
+from constants.defs import MONGO_CONN_STR
 
 
 class DataDB:

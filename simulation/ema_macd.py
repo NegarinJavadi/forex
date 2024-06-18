@@ -15,9 +15,9 @@ SELL = -1
 NONE = 0
 
 def apply_signal(row):
-    if row.direction == BUY and row['mid_l'] > row.EMA:
+    if row.direction == BUY and row.mid_l > row.EMA:
         return BUY
-    if row.direction == SELL and row['mid_h'] < row.EMA:
+    if row.direction == SELL and row.mid_h < row.EMA:
         return SELL
     return NONE   
 
@@ -34,7 +34,7 @@ def prepare_data(df: pd.DataFrame, slow, fast, signal, ema):
     df_an['macd_delta'] = df_an.MACD - df_an.SIGNAL
     df_an['macd_delta_prev'] = df_an.macd_delta.shift(1)
     df_an['direction'] = df_an.apply(apply_cross, axis=1)
-    df_an['EMA'] = df_an['mid_c'].ewm(span=ema, min_periods=ema).mean()
+    df_an['EMA'] = df_an.mid_c.ewm(span=ema, min_periods=ema).mean()
     df_an.dropna(inplace=True)
     df_an.reset_index(drop=True, inplace=True)
     return df_an
@@ -75,13 +75,12 @@ def simulate_params(pair, df, df_m5,  slow, fast, signal, ema, time_d):
     gt.df_results['ema'] = ema
     gt.df_results['pair'] = pair
 
-    #print
     print(gt.df_results.head())
     return gt.df_results
 
 def run_pair(pair):
 
-    time_d = 1
+    time_d = 4
 
     df, df_m5 = load_data(pair, time_d=time_d)
 
@@ -97,8 +96,8 @@ def run_pair(pair):
             for signal in [9,12]:
                 for ema in [50,100]:
                     sim_res_df = simulate_params(pair, df, df_m5, slow, fast, signal, ema, time_d)
-                    #r = sim_res_df.result.sum()
-                    r = sim_res_df['result'].sum()
+                    r = sim_res_df.result.sum()
+                    #r = sim_res_df['result'].sum()
                     trades.append(sim_res_df)
                     print(f"--> {pair} {slow} {fast} {ema} {signal} {r}")
                     results.append(dict(

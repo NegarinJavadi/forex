@@ -1,6 +1,6 @@
 
 import time
-import custom_constants.defs as defs
+import constants.defs as defs
 from api.oanda_api import OandaApi
 from dateutil.parser import parse
 from infrastructure.instrument_collection import instrumentCollection

@@ -5,7 +5,7 @@ sys.path.insert(0,main_dir)
 
 import json
 import time
-import custom_constants.defs as defs
+import constants.defs as defs
 from bot.candle_manager import CandleManager
 from infrastructure.log_wrapper import LogWrapper
 from models.trade_settings import TradeSettings

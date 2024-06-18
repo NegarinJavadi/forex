@@ -10,18 +10,18 @@ NONE = 0
 def apply_take_profit(row, PROFIT_FACTOR):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
-            return (row['ask_c'] - row['ask_o']) * PROFIT_FACTOR + row['ask_c']
+            return (row.ask_c - row.ask_o) * PROFIT_FACTOR + row.ask_c
         else:
-            return (row['bid_c'] - row['bid_o']) * PROFIT_FACTOR + row['bid_c']
+            return (row.bid_c - row.bid_o) * PROFIT_FACTOR + row.bid_c
     else:
         return 0.0
 
 def apply_stop_loss(row):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
-            return row['ask_o']
+            return row.ask_o
         else:
-            return row['bid_o']
+            return row.bid_o
     else:
         return 0.0
 

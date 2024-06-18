@@ -7,7 +7,7 @@ import requests
 from db.db import DataDB
 import json
 from models.instruments import Instrument
-from custom_constants import defs
+from constants import defs
 from api import oanda_api
 
 class InstrumentCollection:

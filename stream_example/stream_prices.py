@@ -9,7 +9,7 @@ import threading
 import pandas as pd
 from timeit import default_timer as timer
 
-import custom_constants.defs as defs
+import constants.defs as defs
 from infrastructure.log_wrapper import LogWrapper
 from models.live_api_price import LiveApiPrice
 from stream_example.stream_base import StreamBase

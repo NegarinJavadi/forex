@@ -1,3 +1,8 @@
+import os
+main_dir = os.path.join(os.path.dirname(__file__), '..')
+import sys
+sys.path.insert(0,main_dir)
+
 import pandas as pd
 import datetime as dt
 
@@ -9,14 +14,14 @@ def apply_take_profit(row, PROFIT_FACTOR):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
             if row.direction == BUY:
-                return (row['ask_c'] - row['ask_o']) * PROFIT_FACTOR + row['ask_c']
+                return (row.ask_c - row.ask_o) * PROFIT_FACTOR + row.ask_c
             else:
-                return (row['ask_o'] - row['ask_c']) * PROFIT_FACTOR + row['ask_o']
+                return (row.ask_o - row.ask_c) * PROFIT_FACTOR + row.ask_o
         else:
             if row.direction == SELL:
-                return (row['bid_c'] - row['bid_o']) * PROFIT_FACTOR + row['ask_c']
+                return (row.bid_c - row.bid_o) * PROFIT_FACTOR + row.ask_c
             else:
-                return (row['bid_o'] - row['bid_c']) * PROFIT_FACTOR + row['ask_o']
+                return (row.bid_o - row.bid_c) * PROFIT_FACTOR + row.ask_o
     else:
         return 0.0
         
@@ -25,14 +30,14 @@ def apply_stop_loss(row):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
             if row.direction == BUY:
-                return row['ask_o']
+                return row.ask_o
             else:
-                return row['ask_c']
+                return row.ask_c
         else:
             if row.direction == SELL:
-                return row['bid_o']
+                return row.bid_o
             else:
-                return row['bid_c']
+                return row.bid_c
     else:
         return 0.0
 
@@ -90,15 +95,15 @@ class Trade:
         
     def update(self, row):
         if self.SIGNAL == BUY:
-            if row['bid_h'] >= self.TP:
-                self.close_trade(row, self.profit_factor, row['bid_h'])
-            elif row['bid_l'] <= self.SL:
-                self.close_trade(row, self.loss_factor, row['bid_l'])
+            if row.bid_h >= self.TP:
+                self.close_trade(row, self.profit_factor, row.bid_h)
+            elif row.bid_l <= self.SL:
+                self.close_trade(row, self.loss_factor, row.bid_l)
         if self.SIGNAL == SELL:
-            if row['ask_l'] <= self.TP:
-                self.close_trade(row, self.profit_factor, row['ask_l'])
-            elif row['ask_h'] >= self.SL:
-                self.close_trade(row, self.loss_factor, row['ask_h'])   
+            if row.ask_l <= self.TP:
+                self.close_trade(row, self.profit_factor, row.ask_l)
+            elif row.ask_h >= self.SL:
+                self.close_trade(row, self.loss_factor, row.ask_h)   
 
 class GuruTester:
     def __init__(self, df_big,

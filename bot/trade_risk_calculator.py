@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0,main_dir)
 
 from api.oanda_api import OandaApi
-import custom_constants.defs as defs
+import constants.defs as defs
 from infrastructure.instrument_collection import instrumentCollection as ic
 
 def get_trade_units(api: OandaApi, pair, signal, loss, trade_risk, log_message):
