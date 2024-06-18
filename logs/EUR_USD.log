@@ -1,2 +1,3 @@
-2024-06-03 03:11:39 Logwrapper init() ./logs/EUR_USD.log
-2024-06-03 03:11:39 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.06, 'riskreward': 1.5}
+2024-06-18 12:59:32 Logwrapper init() ./logs/EUR_USD.log
+2024-06-18 12:59:32 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
+2024-06-18 12:59:39 CandleManager() init last_candle:last_candle:24-06-18 08:00 is_ready:False
