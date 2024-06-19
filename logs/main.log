@@ -9,3 +9,5 @@
 
 
 2024-06-18 12:59:39 Bot started
+2024-06-18 13:30:04 process_candles triggered:['GBP_JPY', 'GBP_CHF', 'EUR_CHF', 'GBP_USD', 'EUR_GBP', 'EUR_USD']
+2024-06-18 13:30:05 Place Trade: TradeDecision(): GBP_CHF dir:1 gain:0.0032 sl:1.1235 tp:1.1288
