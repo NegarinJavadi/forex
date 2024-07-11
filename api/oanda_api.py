@@ -3,32 +3,34 @@ main_dir = os.path.join(os.path.dirname(__file__), '..')
 import sys
 sys.path.insert(0,main_dir)
 
-import os
-import sys
-import requests
-import pandas as pd
-import json
-from dateutil import parser
-from datetime import datetime as dt
+import os 
+import sys 
+import requests #allow to send HTTP requests
+import pandas as pd #library
+import json # allow to work with JSON
+from dateutil import parser 
+from datetime import datetime as dt 
 import constants.defs as defs
 from models.open_trade import OpenTrade
 from models.api_price import ApiPrice
 
 class OandaApi:
 
-    def __init__(self):  
-        self.session = requests.Session()  
-        self.session.headers.update(defs.SECURE_HEADER)  
+    def __init__(self): #constructor method, when define a class
+        self.session = requests.Session() # create a session for making HTTP requests
+        self.session.headers.update(defs.SECURE_HEADER) #?
 
     def make_request(self, url, verb='get', code=200, params=None, data=None, headers=None):
         full_url= f"{defs.OANDA_URL}/{url}"
 
         if data is not None:
             data = json.dumps(data)
+            #if data is provided, convert it to JSON string
 
         headers = {
             'Content-Type': 'application/json',
             'Authorization': f'Bearer {defs.API_KEY}',
+            #make headers for request
         }
 
         try:
@@ -46,13 +48,14 @@ class OandaApi:
                 return True, response.json()
             else:
                 return False, response.json()
+            #check response code with expected code(match)
 
         except Exception as error:
             return False, {'Exception': error}
 
-    def get_account_ep(self, ep, data_key):
+    def get_account_ep(self, ep, data_key): #fetch account endpoint data
         url = f"accounts/{defs.ACCOUNT_ID}/{ep}"
-        ok, data = self.make_request(url)
+        ok, data = self.make_request(url) #make requests
 
         if ok == True and data_key in data:
             return data[data_key]
@@ -67,7 +70,7 @@ class OandaApi:
         return self.get_account_ep("instruments", "instruments")
 
     def fetch_candles(self, pair_name, count=10, granularity="H1",
-                      price="MBA", date_f=None, date_t=None):
+                      price="MBA", date_f=None, date_t=None): #fetch candles data
         instrument = pair_name.replace(' ', '_').upper()  # Ensure the format is correct
         print(f"Formatted instrument: {instrument}")  # Add this line for debugging
 
@@ -75,6 +78,7 @@ class OandaApi:
         params = {
             "granularity": granularity,
             "price": price
+            # sete parameter for the request
         }
 
         if date_f is not None and date_t is not None:
@@ -83,10 +87,12 @@ class OandaApi:
             params["to"] = dt.strftime(date_t, date_format)
         else:
             params["count"] = count
+        #if data is provided, format and add them
 
         print(f"Fetching candles for {pair_name} with params {params}")
 
         ok, data = self.make_request(endpoint, verb="get", params=params)
+        #make get request
 
         if ok:
             return data.get("candles", [])
@@ -94,8 +100,8 @@ class OandaApi:
             print(f"ERROR fetch_candles() {params} {data}")
             return None
 
-    def get_candles_df(self, pair_name, **kwargs):
-        data = self.fetch_candles(pair_name, **kwargs)
+    def get_candles_df(self, pair_name, **kwargs): #convert candlestick data to DataFrame
+        data = self.fetch_candles(pair_name, **kwargs) #fetch the candlestick data
 
         if data is None:
             return None
@@ -104,6 +110,7 @@ class OandaApi:
 
         prices = ['mid', 'bid', 'ask']
         ohlc = ['o', 'h', 'l', 'c']
+        #list of price types and OHLC values
 
         final_data = []
         for candle in data:
@@ -117,17 +124,23 @@ class OandaApi:
                     for o in ohlc:
                         new_dict[f"{p}_{o}"] = float(candle[p][o])
             final_data.append(new_dict)
+        #loop through each candle, if complete, extract data and append it to final_data
         df = pd.DataFrame.from_dict(final_data)
+        #convert final_data to DataFrame
         return df
 
     def last_complete_candle(self, pair_name, granularity):
+        #get the last complete candles time
         df = self.get_candles_df(pair_name, granularity=granularity, count=10)
+        #fetch the lsat 10 candles
         if df is None or df.shape[0] == 0:
             return None
-        return df.iloc[-1].time
+        return df.iloc[-1].time # return the time of last complete candle
 
     def web_api_candles(self, pair_name, granularity, count):
+        #prepare candle data for web API
         df = self.get_candles_df(pair_name, granularity=granularity, count=count)
+        #fetch the candles DataFrame
         if df.shape[0] == 0:
             return None
 
@@ -135,12 +148,14 @@ class OandaApi:
         df = df[cols].copy()
 
         df['time'] = df.time.dt.strftime("%y-%m-%d %H:%M")
+        #select rwlwvant columns and formats the time
 
-        return df.to_dict(orient='list')
+        return df.to_dict(orient='list') #convert DataFrame to dictionary
+    
 
     def place_trade(self, pair_name: str, units: float, direction: int,
-                stop_loss: float = None, take_profit: float = None):
-    
+            stop_loss: float = None, take_profit: float = None):
+
         from infrastructure.instrument_collection import instrumentCollection as ic  # Local import
 
         base_url = 'https://api-fxpractice.oanda.com/v3'
@@ -148,12 +163,14 @@ class OandaApi:
 
         instrument = ic.instruments_dict[pair_name]
         units = round(units, instrument.tradeUnitsPrecision)
+        # Adjust units based on direction
 
         if direction == defs.SELL:
             units = units * -1
         if direction == defs.BUY:
             units = units * 1
 
+        # Prepare the order data
         data = dict(
             order=dict(
                 units=str(units),
@@ -162,15 +179,20 @@ class OandaApi:
             )
         )
 
+        precision = instrument.displayPrecision if instrument.displayPrecision is not None else 5  # Default precision
+
         if stop_loss is not None:
-            sld = dict(price=str(round(stop_loss, instrument.displayPrecision)))
+            print(f"Debug: stop_loss={stop_loss}, displayPrecision={precision}")
+            sld = dict(price=f"{stop_loss:.{precision}f}")
             data['order']['stopLossOnFill'] = sld
 
         if take_profit is not None:
-            tpd = dict(price=str(round(take_profit, instrument.displayPrecision)))
+            print(f"Debug: take_profit={take_profit}, displayPrecision={precision}")
+            tpd = dict(price=f"{take_profit:.{precision}f}")
             data['order']['takeProfitOnFill'] = tpd
 
         ok, response = self.make_request(url, verb="post", data=data, code=201)
+        # Make post request to place the trade
 
         if ok == True and 'orderFillTransaction' in response:
             return response['orderFillTransaction']['id']
@@ -178,10 +200,11 @@ class OandaApi:
             return None
 
 
-    def close_trade(self, trade_id):
+    def close_trade(self, trade_id): #close trade
         base_url = 'https://api-fxpractice.oanda.com/v3/'
         url = f"accounts/{defs.ACCOUNT_ID}/trades/{trade_id}/close"
         ok, _ = self.make_request(url, verb="put", code=200)
+        #make a put request to close the trade
 
         if ok == True:
             print(f"Closed {trade_id} successfully")
@@ -191,6 +214,7 @@ class OandaApi:
         return ok
 
     def get_open_trade(self, trade_id):
+        #get detail of a open trade
         base_url = 'https://api-fxpractice.oanda.com/v3/'
         url = f"accounts/{defs.ACCOUNT_ID}/trades/{trade_id}"
         ok, response = self.make_request(url)
@@ -199,6 +223,7 @@ class OandaApi:
             return OpenTrade(response['trade'])
 
     def get_open_trades(self):
+        #get all open trades
         base_url = 'https://api-fxpractice.oanda.com/v3/'
         url = f"accounts/{defs.ACCOUNT_ID}/openTrades"
         ok, response = self.make_request(url)
@@ -207,17 +232,21 @@ class OandaApi:
             return [OpenTrade(x) for x in response['trades']]
 
     def get_prices(self, instruments_list):
+        #get current prices of instruments
         base_url = 'https://api-fxpractice.oanda.com/v3/'
         url = f"accounts/{defs.ACCOUNT_ID}/pricing"
 
         params = dict(
             instruments=','.join(instruments_list),
             includeHomeConversions=True
+            #set up parameters
         )
 
         ok, response = self.make_request(url, params=params)
+        #make request
 
         if ok == True and 'prices' in response and 'homeConversions' in response:
             return [ApiPrice(x, response['homeConversions']) for x in response['prices']]
+        #return alist of ApiPrice objects
 
         return None

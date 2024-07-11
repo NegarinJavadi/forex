@@ -96,7 +96,7 @@
     "pipLocation": -4,
     "displayPrecision": 5,
     "tradeUnitsPrecision": 0,
-    "marginRate": "0.03333333333333"
+    "marginRate": "0.0333"
   },
   "USD_MXN": {
     "name": "USD_MXN",
